@@ -1,0 +1,10 @@
+//CHATBOAT BRAIN
+! version = 2.0
+
++ *
+% who is there
+- <star> who?
+
++ *
+% * who
+- LOL! <star>! that's funny!

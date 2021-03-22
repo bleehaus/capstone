@@ -1,0 +1,133 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Rivescript
+scopeName: text.rive
+fileTypes: [rive]
+uuid: ca99ae33-dafb-4b98-b431-e1cfd5b2c46e
+
+repository:
+  comments:
+    patterns:
+    - name: comment.line.double-slash
+      match: //.*$
+    - name: comment.block
+      begin: /\*
+      end: \*/
+  characters:
+    patterns: 
+      - name: keyword.control
+        match: (\,|\;|=|\|)
+  constants:
+    patterns:      
+    - name: constant.numeric 
+      match: \d+
+    - name: constant.character
+      match: ([A-Za-z0-9_]*)
+    - name: string.quoted.single
+      match: (\')(.*)(\')
+  tags:
+    patterns: 
+    - name: meta.tag
+      match: (<|\{)(/?[A-Za-z0-9_]+)(.*?)(>|\})
+      captures:
+        '1': {name: variable.parameter}
+        '2': {name: string.quoted}
+        '3': {name: variable.parameter}
+        '4': {name: variable.parameter}
+    - match: (<|>)
+      captures:
+        '1': {name: variable.parameter}
+  defines:
+    patterns:
+    - name: meta.define
+      begin: ^(\s*\!\s(?:version|global|var|sub|person|array))
+      beginCaptures:
+        '1': {name: keyword.other}
+      contentName: string.unquoted
+      end: $
+      patterns: 
+        - include: '#comments'
+        - include: '#characters'
+  labels:
+    patterns:
+    - match: (\s*[<>]\s+begin)
+      captures:
+        '1': {name: variable.parameter}
+    - match: (\s*[<>]\s+topic\s*)([A-Za-z0-9\\-_ ]*)
+      captures:
+        '1': {name: variable.parameter}
+        '2': {name: string.unquoted}
+    - match: (\s*[<>]\s+object\s+)(A-Za-z0-9\-_]+)?(\s+[A-Za-z0-9\-_]+)?
+      captures:
+        '1': {name: variable.parameter}
+        '2': {name: string.unquoted}
+        '3': {name: variable.parameter}
+  alternates:
+    patterns:
+    - name: meta.alternates
+      contentName: string.unquoted
+      begin: (\s\()([A-Za-z0-9\s\-]*)(\|)
+      beginCaptures:
+        '1': {name: keyword.control}
+        '2': {name: string.unquoted}
+        '3': {name: keyword.control}
+      end: (\))
+      endCaptures:
+        '1': {name: keyword.control}
+      patterns:
+        - include: "#characters"
+  optionals:
+    patterns:
+    - name: meta.optionals
+      contentName: constant.language
+      match: (\s\[)([A-Za-z0-9\s\-]*)(\])
+      captures:
+        '1': {name: keyword.control}
+        '2': {name: string.unquoted}
+        '3': {name: keyword.control}
+  triggers:
+    patterns:
+    - name: meta.trigger
+      contentName: string.unquoted
+      begin: ^(\+)
+      beginCaptures:
+        '1': {name: keyword.control}
+      end: $
+      patterns:
+      - include: '#comments'
+      - include: '#alternates'
+      - include: '#optionals'
+  replies:
+    patterns:
+    - name: meta.reply
+      contentName: markup.raw
+      begin: ^(\-)
+      beginCaptures:
+        '1': {name: keyword.control}
+      end: $
+      patterns:
+      - include: '#comments'
+      - include: '#tags'
+  conditions:
+    patterns:
+      - name: meta.condition
+        contentName: markup.raw
+        begin: ^(\s*\*\s)(.+)(\s+(?:eq|ne|==|<>|<=|>=|<|>)\s+)(.+)(=>)
+        beginCaptures:
+          '1': {name: keyword.other}
+          '2': {name: string.unquoted}
+          '3': {name: keyword.other}
+          '4': {name: string.unquoted}
+          '5': {name: keyword.other}
+        end: "$"
+        patterns: 
+          - include: '#tags'
+          - include: '#comments'
+          
+patterns:
+- include: '#comments'
+- include: '#triggers'
+- include: '#replies'
+- include: '#defines'
+- include: '#labels'
+- include: '#conditions'
