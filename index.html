@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pronoun Practicer</title>
+    <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+    <script src="p5/p5.js"></script>
+    <script src="p5/p5.dom.js"></script>
+    <script src="p5/p5.sound.js"></script>
+    <script src="p5/p5.speech.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+<!--     <script src="jquery-3.5.1.min.js"></script> -->
+<!--     <script src="jquery-1.7.2.min.js"></script> -->
+<!--       <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+<!--   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<!-- 	<script src="jquery.min.js"></script> -->
+<!--   <script src="jquery-ui/jquery-ui.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<!--     https://www.npmjs.com/package/canvas-confetti -->
+    <script src="chatbotsetup.js"></script>
+    <script src="script.js"></script>
+    <script src="brain.rive"></script>
+<!--     <script src="script.js"></script> -->
+    <!--   <script src="drag.js"></script> -->
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/dux6rqd.css">
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+  </head>
+
+  <body>
+    <div id="sidebar">
+      <!--   <div id="scoreBox"> -->
+      <div id="scoreBox">
+        <!--     <div id="scoreTitle">
+      <b>your score</b><br><br>
+    </div> -->
+        + <b>right</b> pronouns:
+        <p id="rightScore" class="score">
+          <b>0</b>
+        </p>
+        <p id="rightScoreStickers"></p>
+        - <b>wrong</b> pronouns:
+        <p id="wrongScore" class="score">
+          <b>0</b>
+        </p>
+        <p id="wrongScoreStickers"></p>
+        = <b>total score:</b>
+        <p id="totalScore" class="score">
+          <b>0</b> of 5
+        </p>
+        
+        <div id="progress">
+          <div id="progressBar"></div>
+        </div>
+        <p id ="progressStatus">
+           progress: <b>0%</b>
+        </p>
+      </div>
+      
+
+      <div class="box">
+        <div id="volumeBox">
+          <p id="volumeLevel">buddy volume: <br><b>50%</b></p>
+          <div id="volumeSlider"></div>
+        </div>
+
+        <div id="micBox">
+          <div id="micStatus">enable mic to speak</div>
+          <button id="startRec">
+            <span class="material-icons">mic_off</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="accordionSection">
+        <button class="accordion" id="accordion1">conversation guide</button>
+        <div class="accordionPanel">
+          <p>
+            <p class="buddy">
+              practice buddy: who would you like to talk about today?
+            </p>
+            <ul>
+              <li class="reply">reply with someone's name</li>
+            </ul>
+            <p class="buddy">
+              practice buddy: so you want to talk about [name] today?
+            </p>
+            <ul>
+              <li class="reply">reply "yes" to confirm name</li>
+              <li class="reply">reply "no" to reset name</li>
+              <li class="reply">reply with a new name to reset name</li>
+            </ul>
+            <p class="buddy">
+              practice buddy: what pronouns does [name] use?
+            </p>
+            <ul>
+              <li class="reply">reply with [name]'s pronouns</li>
+            </ul>
+            <p class="buddy">
+              practice buddy: so [name] uses [pronouns]?
+            </p>
+            <ul>
+              <li class="reply">reply "yes" to confirm [name]'s pronouns</li>
+              <li class="reply">reply "no" to reset [name]'s pronouns</li>
+            </ul>
+            <p class="buddy">
+              practice buddy: thanks for letting me know! how did you first meet [name]? try to use [pronouns] in your reply.
+            </p>
+            <ul>
+              <li class="reply">talk about [name] while using [name]'s pronouns as often as possible.</li> 
+              <li class="reply">you'll gain 1 point for every reply that contains [name]'s pronouns!</li>
+              <li class="reply">if you ever use the wrong pronouns for [name], you'll lose 1 point</li>
+          </ul>
+          <br>  
+          </p>
+        </div>
+      </div>
+
+      <div class="accordionSection">
+        <button class="accordion" id="accordion2">pronouns guide</button>
+        <div class="accordionPanel">
+          <p>
+            <p class="buddy">
+              they/them pronouns
+            </p>
+            <ul>
+              <li class="reply"><b>they</b> went to the park.</li> 
+              <li class="reply">i went with <b>them</b>.</li>
+              <li class="reply"><b>they</b> brought <b>their</b> frisbee.</li>
+              <li class="reply">at least, i think the frisbee was <b>theirs</b>.</li>
+              <li class="reply"><b>they</b> threw the frisbee to <b>themself</b>.</li>
+            </ul>
+            <p class="buddy">
+              she/her pronouns
+            </p>
+            <ul>
+              <li class="reply"><b>she</b> went to the park.</li> 
+              <li class="reply">i went with <b>her</b>.</li>
+              <li class="reply"><b>she</b> brought <b>her</b> frisbee.</li>
+              <li class="reply">at least, i think the frisbee was <b>hers</b>.</li>
+              <li class="reply"><b>she</b> threw the frisbee to <b>herself</b>.</li>
+            </ul>
+            <p class="buddy">
+              he/him pronouns
+            </p>
+            <ul>
+              <li class="reply"><b>he</b> went to the park.</li> 
+              <li class="reply">i went with <b>him</b>.</li>
+              <li class="reply"><b>he</b> brought <b>his</b> frisbee.</li>
+              <li class="reply">at least, i think the frisbee was <b>his</b>.</li>
+              <li class="reply"><b>he</b> threw the frisbee to <b>himself</b>.</li>
+            </ul>
+            <p>
+              <b>note:</b> i'm working on expanding my library, but for now i am only programmed to use she/her, he/him, and they/them pronouns. stay tuned for more!
+            </p>
+            <br>
+          </p>
+        </div>
+      </div>
+      
+      <div class="accordionSection">
+        <button class="accordion" id="accordion3">info</button>
+        <div class="accordionPanel">
+          <p>
+            I'm a pronouns practicer tool made by <a href="http://bylee.work/">Miles "Bread" Lee</a> in Spring 2021. I use HTML, CSS, JavaScript, <a href="https://p5js.org/">p5.js</a>, and <a href="https://www.rivescript.com/">RiveScript</a>.
+          </p>
+          <p class="infoLinks">
+            <a href="/info.html">info</a> <a href="/faq.html">faq</a> <a href="/resources.html">resources</a>
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+    <!-- <canvas id="chatcanvas"></canvas> -->
+    <div class="chatspace">  
+      <div class="intro">
+        <h2>practice pronouns with me!</h2>
+        <div class="intro">
+          <!--       <div class="drag">
+        drag me xd
+      </div> -->
+        </div>
+        <!--     <button onClick="scrollSmoothToBottom('replyspace')">Scroll <b>Smooth</b> to Bottom</button> -->
+        <div id="replyspace">
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            hi! i’m a gender pronouns practice buddy! are you struggling with
+            using the right pronouns for someone you know? never fear! i can
+            help you practice using the right pronouns. if you ever slip up,
+            i’ll gently correct you.
+          </p>
+          <p class="botreply">who would you like to talk about today?</p>
+          <!--       <p class="userreplylabel">me<br></p><p class="userreply">hello!</p> -->
+        </div>
+        <div class="chatbox">
+          <!--           <input
+            id="user_input"
+            size="2em"
+            placeholder="type a message to the bot"
+          /> -->
+          <!--           <textarea id="user_input" placeholder="type your reply" rows="1"></textarea> -->
+          <textarea
+            id="user_input"
+            placeholder="type your reply"
+            rows="1"
+          ></textarea>
+          <!--                onkeydown = "enterKey();" -->
+          <button id="submit">
+            <i class="material-icons">&#xe163;</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

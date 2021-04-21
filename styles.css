@@ -1,0 +1,689 @@
+body {
+	font-family: 'DM Mono', input-sans-narrow, poppins, stratos, sans-serif;
+	font-size:2em;
+  background: linear-gradient(42deg, #f297a8, #8ab6ef, #b78aef, #F9D363);
+    background-size: 600% 10000%;
+    -webkit-animation: gradientShift 300s ease infinite;
+    -moz-animation: gradientShift 300s ease infinite;
+    animation: gradientShift 300s ease infinite;
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  line-height:1.25;
+}
+
+a {
+  color:black;
+  text-decoration:none;
+  transition-duration:1s;
+  font-weight:bold;
+}
+
+a:hover {
+  color:black;
+  background-color:rgba(255, 255, 255, 0.9);
+  border-radius:10px;
+  text-decoration:none;
+  transition-duration:1s;
+  padding: 0px 5px;
+  font-weight:bold;
+}
+
+.infoLinks a {
+  color:black;
+  background-color:rgba(255, 255, 255, 0.4);
+  border-radius:100px;
+  text-decoration:none;
+  transition-duration:1s;
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0px;
+  display:inline-block;
+  font-weight:bold;
+}
+
+.infoLinks a:hover {
+  background-color:rgba(255, 255, 255, 0.9);
+  cursor:pointer;
+}
+
+/*#chatcanvas {
+  background-color:transparent;
+  margin:0;
+  padding:0;
+  width:0;
+  height:0;
+}*/
+
+b {
+  font-weight:bold;
+}
+
+button {
+  border: none;
+  background-color:transparent;
+}
+
+#sidebar {
+  font-family: 'DM Sans', poppins, stratos, sans-serif;
+/*   cursor:ew-resize; */
+  resize: horizontal;
+  height:100vh;
+  width:30%;
+  max-width:500px;
+  background-color:rgba(255, 255, 255, 0.2);
+  border-radius:0 30px 30px 0;
+  position:absolute;
+  top:0;
+  left:0;
+  box-sizing:border-box;
+  overflow-y:auto;
+  font-size:0.5em;
+}
+
+.chatspace {
+  width:60%;
+  margin: 0% 5% 0% 35%;
+  display:block;
+  max-width:650px;
+/*   height:100%; */
+}
+
+#replyspace {
+  display:block;
+/*   margin-bottom:4em; */
+/*   padding-bottom:4em; */
+  height:65vh;
+/*   max-height:500px; */
+  overflow-y: auto;
+  padding-right:0.5em;
+  scroll-behavior: smooth;
+}
+
+.botreplylabel {
+  font-size:0.5em;
+  font-weight:bold;
+  display:block;
+  margin:0.5em 0em 0em 0em;
+  padding:0;
+/*   background-color:yellow; */
+  clear:both;
+}
+
+.userreplylabel {
+  font-family:'DM Sans', poppins, stratos, sans-serif;
+  font-size:0.5em;
+  font-weight:bold;
+  text-align:right;
+  display:block;
+  margin:0.5em 0em 0em 0em;
+  padding:0;
+/*   background-color:yellow; */
+  clear:both;
+}
+
+.botreply {
+  background-color:rgba(255, 255, 255, 0.5);
+  border-radius: 25px 25px 25px 0px;
+  padding: 10px 20px;
+  margin:0.5em 0em 0.5em 0em;
+  font-size:0.8em;
+  display:inline-block;
+  clear:both;
+  transition-duration:0.5s;
+}
+
+.userreply {
+  font-family: 'DM Sans', poppins, stratos, sans-serif;
+  background-color:rgba(255, 255, 255, 0.8);
+  border-radius: 25px 25px 0px 25px;
+  padding: 10px 20px;
+  margin:0.5em 0em 0.5em 0em;
+  font-size:0.8em;
+  display:inline-block;
+  text-align:right;
+/*   justify-content:flex-end; */
+  float:right;
+  clear:both;
+  transition-duration:0.5s;
+}
+
+.botreply:hover {
+  background-color:rgba(255, 255, 255, 0.6);
+}
+
+.userreply:hover {
+  background-color:rgba(255, 255, 255, 0.9);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius:100px;
+}
+
+::-webkit-scrollbar-track {
+  background:rgba(255, 255, 255, 0.1);
+  border-radius:100px;
+  border-radius:100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius:100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.intro {
+  font-size:0.8em;
+}
+
+.chatbox {
+  display:flex;
+  margin: 1em 0em;
+  position:fixed;
+  bottom:0.5em;
+  width:60%;
+  max-width:650px;
+}
+
+
+#user_input {
+/*   resize: none; */
+  overflow: none;
+  text-overflow: none;
+  white-space:wrap;
+  font-family: 'DM Sans', poppins, stratos, sans-serif;
+	font-size:0.8em;
+  text-align:left;
+/*   font-weight:bold; */
+  width:80%;
+  background: none;
+  border-style: solid;
+  border-width: medium;
+  color: rgba(0, 0, 0, 1);
+  border-color: rgba(255, 255, 255, 0.9);
+/*   border-color:transparent; */
+  position:sticky;
+  overflow:none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  background-color:rgba(255, 255, 255, 0.3);
+  transition-duration:1s;
+}
+
+#user_input:hover {
+  background-color:rgba(255, 255, 255, 0.9);
+}
+
+#user_input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  transition-duration:1s;
+/*   font-weight:bold; */
+}
+
+#user_input:hover::placeholder {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+#submit {
+  border: none;
+  padding:0px 10px;
+  background-color:transparent;
+  color:rgba(0, 0, 0, 0.8);
+  width:18%;
+}
+
+#submit .material-icons {
+  font-size:3em;
+  color:rgba(255, 255, 255, 0.5);
+  transition-duration:1s;
+}
+
+.material-icons:hover {
+  rgba(255, 255, 255, 1);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0em;
+  padding:0.5em 0em;
+  width:100%;
+  background: linear-gradient(42deg, #f297a8, #8ab6ef, #b78aef, #F9D363);
+    background-size: 600% 10000%;
+    -webkit-animation: gradientShift 300s ease infinite;
+    -moz-animation: gradientShift 300s ease infinite;
+    animation: gradientShift 300s ease infinite;
+}
+
+.box {
+  display:flex;
+  flex-wrap: wrap;
+  margin:1em;
+  padding:0;
+}
+
+#scoreBox {
+/*   display:flex; */
+/*   position: absolute; */
+/*   margin-bottom:4em; */
+/*   z-index: 9; */
+/*   cursor: move; */
+/*   top: randomNumber + vh; */
+/*   background-color:rgba(255, 255, 255, 0.55); */
+/*   padding:1em; */
+/*   border-radius:10px; */
+  transition-duration: 1s;
+  transition-property: background-color;
+/*   text-align:center; */
+/*   max-width:180px; */
+  margin: 2em;
+/*   padding:1em; */
+}
+
+#scoreBox:hover {
+/*   background-color:rgba(255, 255, 255, 0.95); */
+}
+
+.score {
+  font-size:2em;
+/*   font-weight:bold; */
+  padding:0;
+  margin:0;
+  text-align:left;
+}
+
+#totalScore {
+  font-size:2em;
+/*   font-weight:bold; */
+  padding:0;
+  margin:0;
+/*   text-align:center; */
+}
+
+#rightScoreStickers {
+  margin: 0 0 1em 0;
+}
+
+#wrongScoreStickers {
+  margin: 0 0 1em 0;
+}
+
+#progress {
+  width: 50%;
+  border-radius:10px;
+  margin: 1em 0em;
+  transition-duration:1s;
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
+#progressBar {
+  width: 0%;
+  height: 10px;
+  background-color:rgba(0, 200, 0, 0.9);
+  border-radius:10px;
+  transition-duration:1s;
+}
+
+#volumeBox {
+/*   font-size:0.5em; */
+/*   display:flex; */
+/*   position: absolute; */
+/*   top:0; */
+/*   left:80vw; */
+/*   margin-bottom:4em; */
+/*   z-index: 5; */
+/*   background-color:rgba(255, 255, 255, 0.55); */
+/*   padding:1em; */
+/*   border-radius:0px 0px 10px 10px; */
+  text-align:center;
+  transition-duration:1s;
+  transition-property: background-color;
+  margin-bottom: 1em;
+  padding:0em 1em;
+}
+
+#volumeBox:hover {
+/*   background-color:rgba(255, 255, 255, 0.95); */
+}
+
+#volumeSlider input {
+  cursor:pointer;
+  width:50px;
+/*   background-color:red; */
+}
+
+#volumeBoxDrag{
+/*   background-color:orange; */
+/*   height:20px; */
+/*   cursor: move; */
+}
+
+#micBox {
+/*   font-size:0.5em; */
+/*   display:flex; */
+/*   position: absolute; */
+/*   top:200px; */
+/*   left:80vw; */
+/*   margin-bottom:4em; */
+/*   z-index: 5; */
+/*   cursor: move; */
+/*   background-color:rgba(255, 255, 255, 0.55); */
+  padding:1em;
+  text-align:center;
+  transition-duration:1s;
+  transition-property: background-color;
+  margin-bottom: 1em;
+}
+
+#micBox:hover{
+/*   background-color:rgba(255, 255, 255, 0.95); */
+}
+
+#micBox .material-icons {
+  background-color:rgba(255, 255, 255, 0.55);
+  border-radius:20px;
+  padding:10px;
+  margin:8px;
+  transition-duration:1s;
+}
+
+#micBox .material-icons:hover {
+  background-color:rgba(255, 255, 255, 0.95);
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 8px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.5);
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -5px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 1);
+/*   border: 1.5px solid #00001e; */
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+/*   background: #ffffff; */
+}
+input[type=range]::-moz-range-track {
+  background: rgba(255, 255, 255, 0.5);
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 1);
+/*   border: 1.5px solid #00001e; */
+  border-radius: 15px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 20px;
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0.5);
+  border: 0;
+  border-radius: 20px;
+}
+input[type=range]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 1);
+/*   border: 1.5px solid #00001e; */
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(255, 255, 255, 0.5);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
+
+
+#startRec {
+  color:black;
+/*   background-color:rgba(255, 255, 255, 0.4);
+  border-radius:100px; */
+  border: none;
+  transition-duration:1s;
+/*   padding: 10px 30px;
+  font-weight:bold; */
+/*   font-family: poppins, sans-serif; */
+/*   position:absolute; */
+  margin-bottom:0;
+}
+
+.material-icons {
+  cursor:pointer;
+}
+
+#startRec .material-icons {
+  font-size:3em;
+}
+
+.accordionSection {
+  font-family: 'DM Sans', poppins, sans-serif;
+/*   display: block; */
+/*   left:1em; */
+/*   top:20em; */
+/*   width:20%; */
+/*   max-height:200px; */
+/*   position:absolute; */
+/*   margin:0; */
+/*   z-index:0; */
+  font-size:1em;
+/*   background-color:rgba(255, 255, 255, 0.7); */
+/*   border-radius:10px; */
+/*   overflow-y:scroll; */
+}
+
+.accordion {
+/*   background-color: rgba(255, 255, 255, 0.3); */
+/*   color: #444; */
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'DM Mono', poppins, sans-serif;
+  font-size:1em;
+/*   overflow-y:scroll; */
+/*   border-style: solid none none none; */
+/*   border-color:rgba(255, 255, 255, 0.5); */
+}
+
+.active, .accordion:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+/*   overflow-y:scroll; */
+}
+
+.accordionPanel {
+  padding: 0 1em;
+  background-color: rgba(255, 255, 255, 0.3);
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+/*   font-size:1em; */
+  overflow-y:auto;
+  border-style: solid none none none;
+  border-color:rgba(255, 255, 255, 0.3);
+  height:300px;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.buddy {
+  font-family: 'DM Mono', poppins, sans-serif;
+  list-style-type: none;
+/*   color:yellow; */
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+.drag {
+  cursor:move;
+  z-index: 100;
+/*   background-color:pink; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+/*   display:block; */
+  font-size: 100px;
+  transition-duration:0.5s;
+}
+
+.drag:hover {
+  font-size:140px;
+  transform:rotate(100deg);
+  transform: scale(2, 2);
+}
+
+.emojiSpan {
+  font-size: 100px;
+  z-index: 2;
+  transition-duration:0.5s;
+}
+
+.emojiSpan:hover {
+  font-size:140px;
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+
+.b {top: 120px}
+.c {left: 120px}
+.d {top: 120px;left:120px}
+
+/* .selected {background-color: #4af;} */
+
+
+main {
+  height:0;
+  width:0;
+  padding:0;
+  margin:0;
+}
+
+.p5Canvas {
+  height:0;
+  width:0;
+  padding:0;
+  margin:0;
+}
+
+.footer .chatpsace {
+  margin-bottom:0em;
+  background-color:white;
+}
+
+@-webkit-keyframes gradientShift {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+@-moz-keyframes gradientShift {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+@keyframes gradientShift {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones */
+  body {
+    font-size:1.5em;
+  }
+  #sidebar {
+    display:none;
+  }
+  .chatspace {
+    margin:auto;
+    width:90%;
+  }
+  .chatbox {
+    width:90%;
+  }
+  #replyspace {
+    height:60vh;
+  }
+  h2 {
+    font-size:1em;
+/*     text-align:center; */
+  }
+  #user_input {
+    rows:1;
+/*     background-color:yellow; */
+  }
+  .emojiSpan {
+    display:none;
+  }
+  .drag {
+    display:none;
+  }
+}

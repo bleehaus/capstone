@@ -1,0 +1,662 @@
+// RIVE SCRIPT
+// github: https://github.com/aichaos/rivescript-js
+// test written code: https://www.rivescript.com/try
+// test your own code: https://play.rivescript.com/
+// coding train tutorial pt 1: https://www.youtube.com/watch?v=zGe1m_bLOFk&t=0s
+// coding train tutorial pt 2: https://www.youtube.com/watch?v=iFTgphKCP9U&t=0s
+
+// SETTING BOT VARIABLES
+! var name     = RiveScript Test Bot
+! var age      = 9000
+! var gender   = androgynous
+! var location = Cyberspace
+! var phone    = 5551234
+! var email    = test@mydomain.com
+! var pronouns = they/them
+
+// SETTING SUBSTITUTIONS
+! sub i’m       = i am
+! sub i’d       = i would
+! sub i’ve      = i have
+! sub i’ll      = i will
+! sub don’t     = do not
+! sub isn’t     = is not
+! sub you’d     = you would
+! sub you’re    = you are
+! sub you’ve    = you have
+! sub you’ll    = you will
+! sub he’d      = he would
+! sub he’s      = he is
+! sub he’ll     = he will
+! sub she’d     = she would
+! sub she’s     = she is
+! sub she’ll    = she will
+! sub they’d    = they would
+! sub they’re   = they are
+! sub they’ve   = they have
+! sub they’ll   = they will
+! sub we’d      = we would
+! sub we’re     = we are
+! sub we’ve     = we have
+! sub we’ll     = we will
+! sub whats     = what’s
+! sub what is   = what’s
+! sub what’re   = what are
+! sub what’ve   = what have
+! sub what’ll   = what will
+! sub can’t     = can not
+! sub whos      = who is
+! sub who’s     = who is
+! sub who’d     = who would
+! sub who’ll    = who will
+! sub don’t     = do not
+! sub didn’t    = did not
+! sub it’s      = it is
+! sub could’ve  = could have
+! sub couldn’t  = could not
+! sub should’ve = should have
+! sub shouldn’t = should not
+! sub would’ve  = would have
+! sub wouldn’t  = would not
+! sub when’s    = when is
+! sub when’re   = when are
+! sub when’d    = when did
+! sub y         = why
+! sub u         = you
+! sub ur        = your
+! sub r         = are
+! sub im        = i am
+! sub wat       = what
+! sub wats      = what is
+! sub ohh       = oh
+! sub becuse    = because
+! sub becasue   = because
+! sub becuase   = because
+! sub practise  = practice
+! sub its a     = it is a
+! sub fav       = favorite
+! sub fave      = favorite
+! sub iam       = i am
+! sub realy     = really
+! sub iamusing  = i am using
+! sub amleaving = am leaving
+! sub yuo       = you
+! sub youre     = you are
+! sub didnt     = did not
+! sub ain’t     = is not
+! sub aint      = is not
+! sub wanna     = want to
+! sub brb       = be right back
+! sub bbl       = be back later
+! sub gtg       = got to go
+! sub g2g       = got to go
+! sub she/her   = she her
+! sub he/him    = he him
+! sub they/them = they them
+
+// SETTING PERSON SUBSTITUTIONS
+! person i am    = you are
+! person you are = i am
+! person i’m     = you’re
+! person you’re  = i’m
+! person my      = your
+! person your    = my
+! person you     = i
+! person i       = you
+
+
+// SETTING ARRAYS
+! array he   = he him  his himself
+! array she  = she her hers herself
+! array they = they them themself their theirs themselves
+! array affirmative = yes yeah yep yup mmhmm ye right correct good great amazing awesome fantastic glad yea ya y
+! array negative = no nope noo wrong incorrect bad worst awful horrible rats fuck shit crap dang nah n
+! array apology = sorry apologize forgive
+! array thanks = thanks thank appreciate ty thx thanx
+! array confusion = why how when who what help confuse weird wack
+
+//WORDS THAT CONTAIN HE BUT AREN'T PRONOUNS
+! array ignore = this there here where when hey het hen heh hem ache furthermore theoretical therapeutic mathematics nonetheless grandmother grandfather sympathetic atmospheric theological spreadsheet inheritance catastrophe unpublished philosopher heavyweight whereabouts brotherhood treacherous motherboard synthesized thermometer psychedelic furtherance unscheduled prosthetics wherewithal hereinafter orchestrate heartbroken wheelbarrow anaesthetic synthesizer hypothermia shenanigans anaesthesia unblemished hypothesize kitchenware endothelium blasphemous cheerleader hermeneutic headhunting parenthesis kitchenette headquarter microsphere lithosphere incoherence amphetamine earthenware thereabouts unvarnished hematoxylin herringbone paresthesia stepbrother netherworld unhealthful troposphere herpesvirus discotheque smithereens endothermic cryotherapy clothesline psychedelia herbivorous intrathecal unfurnished inauthentic tracheotomy cheesecloth tetrahedral halfhearted unauthentic wheelwright kindhearted untarnished unrehearsed thermometry cyclohexane tetrahedron hepatectomy downhearted stomachache hearthstone hexadecimal bibliotheca rhetorician knucklehead shepherdess leatherette haberdasher anesthetize thenceforth levelheaded hemophiliac atmosphere everywhere strengthen phenomenon altogether thereafter peripheral helicopter hypothesis theatrical hemisphere wheelchair phenomenal anesthesia hesitation comprehend rhetorical aesthetics unfinished hereditary sweetheart hematology motherhood rheumatoid headmaster weathering checkpoint henceforth stepfather theologian geothermal dishwasher biographer anesthetic antithesis hemoglobin hemorrhage epithelium kingfisher thereunder cheesecake thermostat incoherent stepmother synthesize heartbreak bellwether hemophilia letterhead maidenhead diphtheria reschedule hemostasis fatherhood microfiche prosthetic heartthrob heretofore figurehead empathetic unattached fatherland motherland rheumatism headstrong archeology dispatcher apotheosis apothecary unheralded hematocrit weatherman disheveled unpunished debauchery apostrophe unbleached hemostatic herbaceous bothersome hepatocyte fatherless monotheism broadsheet prosthesis catechesis wheelhouse exothermic subheading bedclothes chessboard isothermal hyphenated feathering amenorrhea shearwater thermistor bridgehead therefore otherwise elsewhere somewhere publisher gathering chemistry synthesis southeast synthetic cathedral aesthetic authentic orchestra northeast phenomena hepatitis therapist whichever adherence rehearsal unmatched checklist untouched watershed fisherman apartheid coherence unhealthy weathered heartbeat avalanche periphery spaghetti heartland spearhead schematic heartfelt prophetic overwhelm spherical whitehead unchecked godfather hereafter unscathed whereupon ephemeral bloodshed moustache exchequer anguished thesaurus shellfish checkbook mothering phenotype therefrom treachery withering stretcher checkered gigahertz unhelpful hermitage feathered refresher arrowhead heuristic apprehend heartless headliner steelhead bookshelf apathetic godmother otherness blasphemy herbicide euphemism bombshell northerly biosphere clamshell unabashed hexagonal chevalier headphone heartache therewith heretical hesitancy recherche coherency rheometer riverhead beachhead archetype brotherly heartburntogether northern southern finished chemical anywhere schedule attached whenever inherent heritage wherever overhead bachelor rhetoric theology coherent headline shepherd polished headache luncheon detached fletcher forehead hesitate hitherto helpless cheerful diarrhea pathetic adhesive chestnut thematic paycheck adhesion breathed preacher hesitant cohesion heavenly upheaval hegemony catheter wretched prophecy nutshell heighten checkout rehearse furthest theorist decipher hedgehog bohemian pantheon sherlock unhedged ischemia lengthen heartily mustache headlong shelving launcher anathema farthest sheeting headroom withered ethereal breather pheasant rheology esthetic heredity vehement pastiche headland flywheel unwashed headless adherent hermetic feathery skinhead headgear heirloom wellhead behemoth bulkhead ephemera phenolic sheepish headband herewith motherly hedonism unheeded astheniaanother further whether helping neither weather teacher brother healthy hearing kitchen thereby heavily whereas theatre clothes therapy heading helpful whereby touched checked nowhere leather sheriff shelter thermal heather shelves thereof crushed breathe farther therein wheeler smashed butcher herring chemist brushed pitcher theater thereto prophet feather heroine wheeled voucher inherit wherein catcher thereon unheard headend duchess headway chevron hepatic hectare bohemia tranche cherish heroism panther headset fishery heparin theorem atheist watcher preheat alchemy checker panache heiress archery hearsay echelon heinous brothel helical checkup ratchet atheism cheetah withers epithet hellish cliched smother redhead egghead toothed hatchet heathen heretic gouache sheared warheadhealth either rather mother father theory scheme headed height gather cheese herein heaven fisher bother heated sphere thesis cherry herald sheila sherry upheld heroic touche hereby helmet adhere nephew cheers heroin header hereof hector archer heater anthem hectic cheque riches herbal schema hearth hearty psyche helper apache heyday themed ghetto mayhem arched helium washer heller heresy soothe herpes cliche cheeky sheath hernia whence behest cheery loathe kosher gopher phenom healer wither nether eschew bethel hermit thence hereto phenol dished clothe tether heifer rhesus cipher cheesy bushel hearse cachet teched hyphen creche lather quiche reheat hither lichen shelve gauche wheezethere other these where heart ahead check heavy sheet henry theme hence cheap wheel chest shelf shell theft sheer hedge niche hello sheep wheat cheek heath cache cheer hefty chess shear usher cheat heady helix sheen hertz heron ether bathe heave theta lithe lathe therm chemo chewy sheik tithe sheaf mache rheum ashen heist henna chert wheal chela fiche ocher withe rathe hemic cheep hexyl whelp whelk tache raphe sherd lethe hemin thesp heigh henge mohel ruche theca thebe whelm helot wheen helve hemal kheda hexad bohea sadhe rheme thegn boche chefs ashed ashes aches aahed ached chews chevy when then here help held head hear heat hell hero chef heal heap heel heir herb herd helm heck heed thee chew ache shea hemp whey chez hewn whet ahem rhea heft phew whew shew heme helo herm hern whee ghee hest thew heth hent herl ahed hens hems eche hehs heil hebe ohed hets hews khetthe hey hen hem hex hew hep heh het
+
+
+// STARTING CONVO, SETTING SUBJECT VARIABLES
+
++ (@confusion)|* (@confusion) *|* (@confusion)|(@confusion)
+- if you have questions about how this works, check out the info page at the top right!
+
++ *
+- <set subjectName=<star>>so you want to talk about <get subjectName> today?
+
++ (@affirmative)|* (@affirmative) *|* (@affirmative)|(@affirmative)
+% so you want to talk about * today
+- great! what are <get subjectName>‘s pronouns?{topic=getpronouns}
+
++ (@negative)|* (@negative) *|* (@negative)|(@negative) *
+% so you want to talk about * today
+- my bad! so who would you like to talk about today?
+
++ *
+% my bad so who would you like to talk about today
+- <set subjectName=<star>>so you want to talk about <get subjectName> today?
+
+> topic getpronouns
+  
+  + (@she)|* (@she) *|* (@she)|(@she) *{weight=10}
+  - thanks! so <get subjectName>‘s pronouns are she/her?
+
+  + (@he)|* (@he) *|* (@he)|(@he) *{weight=10}
+  - thanks! so <get subjectName>‘s pronouns are he/him?
+
+  + (@they)|* (@they) *|* (@they)|(@they) *{weight=10}
+  - thanks! so <get subjectName>‘s pronouns are they/them?
+
+  + *
+  % what are *s pronouns
+  - sorry, can you repeat <get subjectName>‘s pronouns? i currently help practice she/her, he/him, and they/them pronouns, but am working on expanding. please tell me <get subjectName>’s pronouns like this: “she/her pronouns”
+  
+  + *
+  % sorry can you repeat *s pronouns i currently help practice she her he him and they them pronouns but am working on expanding please tell me *s pronouns like this she her pronouns
+  - sorry, can you repeat <get subjectName>‘s pronouns? i currently help practice she/her, he/him, and they/them pronouns, but am working on expanding. please tell me <get subjectName>’s pronouns like this: “she/her pronouns”
+  
+  + (@negative)|* (@negative) *|(@negative) *{weight=10}
+  % thanks so *s pronouns are she her
+  - oh, my bad! can you tell me what <get subjectName>‘s pronouns are?
+
+  + (@negative)|* (@negative) *|(@negative) *{weight=10}
+  % thanks so *s pronouns are he him
+  - oh, my bad! can you tell me what <get subjectName>‘s pronouns are?
+
+  + (@negative)|* (@negative) *|(@negative) *{weight=10}
+  % thanks so *s pronouns are they them
+  - oh, my bad! can you tell me what <get subjectName>‘s pronouns are?
+    
+  + *
+  % thanks so *s pronouns are she her
+  - sorry, can you repeat <get subjectName>‘s pronouns? i currently help practice she/her, he/him, and they/them pronouns, but am working on expanding. please tell me <get subjectName>’s pronouns like this: “she/her pronouns”
+
+  + (@he)|* (@he) *|(@he) *|he/him|he{weight=10}
+  % oh my bad can you tell me what *s pronouns are
+  - thanks! so <get subjectName>‘s pronouns are he/him?
+
+  + (@she)|* (@she) *|(@she) *{weight=10}
+  % oh my bad can you tell me what *s pronouns are
+  - thanks! so <get subjectName>‘s pronouns are she/her?
+
+  + (@they)|* (@they) *|* (@they)|(@they) *{weight=10}
+  % oh my bad can you tell me what *s pronouns are
+  - thanks! so <get subjectName>‘s pronouns are they/them?
+
+  + *
+  % oh my bad can you tell me what *s pronouns are
+  - sorry, can you repeat <get subjectName>‘s pronouns? i currently help practice she/her, he/him, and they/them pronouns, but am working on expanding. please tell me <get subjectName>’s pronouns like this: “she/her pronouns”
+
+  + (@affirmative)|* (@affirmative) *|(@affirmative) *|* (@affirmative){weight=10}
+  % thanks so *s pronouns are she her
+  - thanks for letting me know! how did you first meet <get subjectName>? try to use her pronouns in your reply.{topic=shepractice}
+
+  + (@affirmative)|* (@affirmative) *|(@affirmative) *{weight=10}
+  % thanks so *s pronouns are he him
+  - thanks for letting me know! how did you first meet <get subjectName>? try to use his pronouns in your reply.{topic=hepractice}
+
+  + (@affirmative)|* (@affirmative) *|(@affirmative) *{weight=10}
+  % thanks so *s pronouns are they them
+  - thanks for letting me know! how did you first meet <get subjectName>? try to use their pronouns in your reply.{topic=theypractice}
+
+  + *{weight=1}
+  - who would you like to talk about today?{topic=random}
+  
+< topic
+
+
+> topic shepractice
+  + *
+  % thanks for letting me know how did you first meet her
+  - what was your first impression of her?
+  - how often do you talk to her?
+  - what do you and <get subjectName> talk about?
+  - how is she doing lately?
+  - then what happened?
+  - what does she like doing?
+  - what does she like to read or watch?
+  - does <get subjectName> like video games?
+  - does she like music?
+  - what brings her joy?
+  
+  + *
+  % what was your first impression of her
+  - what do you think of her now?
+  - what do you think of <get subjectName> now?
+  - how often do you talk to her?
+  - how long ago was that?
+  
+  + *
+  % what do you and * talk about
+  - so <get subjectName> likes talking about <star>?
+  - how often do you talk to her?
+  - do you ever call her?
+  - do you know any of her friends?
+  - when did you last talk to her?
+  - are you in a group chat with her?
+  - would you rather talk about something else with <get subjectName>?
+  - do you wish you talked to her more often?
+  - how would you support <get subjectName> if someone misgendered her?{topic=pronouns}
+  
+  + *
+  - how is she doing lately?
+  - then what happened?
+  - what does she like doing?
+  - what does she like to read or watch?
+  - does <get subjectName> play any video games?
+  - does she like music?
+  - what brings her joy?
+  - does she tell good jokes?
+  - how do you feel about using her pronouns?{topic=pronouns}
+  - how would you feel if someone misgendered her?{topic=pronouns}
+  - how does she feel when others misgender her?{topic=pronouns}
+  //- how do you feel when you misgender her?{topic=pronouns}
+  
+  + (@affirmative)
+  % does * play any video games
+  - cool! what sort of video games does she play?
+  - cool! what gaming consoles does she use?
+  - is she a gamer?
+  
+  + pronouns|* pronouns *|pronouns *|* pronouns
+  - let’s talk about pronouns!{topic=pronouns}
+  
+  + (@he)|* (@he) *|(@he) *|(@they)|* (@they) *|(@they) *
+  - remember that <get subjectName>‘s pronouns are she/her pronouns!{topic=pronouns}
+  
+  + exit practice|* exit practice|*exit practice*
+  - let’s talk again soon!{topic=random}
+< topic
+
+> topic hepractice
+  + *
+  % thanks for letting me know how did you first meet him
+  - what was your first impression of him?
+  - how often do you talk to him?
+  - what do you and <get subjectName> talk about?
+  - how is he doing lately?
+  - then what happened?
+  - what does he like doing?
+  - what does he like to read or watch?
+  - does <get subjectName> like video games?
+  - does he like music?
+  - what brings him joy?
+  
+  + *
+  % what was your first impression of him
+  - what do you think of him now?
+  - what do you think of <get subjectName> now?
+  - how often do you talk to him?
+  - how long ago was that?
+  
+  + *
+  % what do you and * talk about
+  - so <get subjectName> likes talking about <star>?
+  - how often do you talk to him?
+  - do you ever call him?
+  - do you know any of his friends?
+  - when did you last talk to him?
+  - are you in a group chat with him?
+  - would you rather talk about something else with <get subjectName>?
+  - do you wish you talked to him more often?
+  - how would you support <get subjectName> if someone misgendered him?{topic=pronouns}
+  
+  + *
+  - how is he doing lately?
+  - then what happened?
+  - what does he like doing?
+  - what does he like to read or watch?
+  - does <get subjectName> play any video games?
+  - does he like music?
+  - what brings him joy?
+  - does he tell good jokes?
+  - how do you feel about using his pronouns?{topic=pronouns}
+  - how do you feel when others misgender him?{topic=pronouns}
+  - how does he feel when others misgender him?{topic=pronouns}
+  //- how do you feel when you misgender him?{topic=pronouns}
+  
+  + (@affirmative)
+  % does * play any video games
+  - cool! what sort of video games does he play?
+  - cool! what gaming consoles does he use?
+  - is he a gamer?
+  
+  + pronouns|* pronouns *|pronouns *|* pronouns
+  - let’s talk about pronouns!{topic=pronouns}
+  
+  + (@she)|* (@she) *|(@she) *|(@they)|* (@they) *|(@they) *
+  - remember that <get subjectName>‘s pronouns are he/him pronouns!{topic=pronouns}
+  
+  + exit practice|* exit practice|*exit practice*
+  - let’s talk again soon!{topic=random}
+< topic
+
+> topic theypractice
+  
+  + (@they)|* (@they) *|(@they) *|* (@they){weight=100}
+  % thanks for letting me know how did you first meet * try to use their pronouns in your reply
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! see if you can get your total score to 5. so what was your first impression of them?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. so how often do you talk to them?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. so what do you and <get subjectName> talk about?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. how are they doing lately?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. then what happened?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. what do they like doing?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. what do they like to read or watch?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. does <get subjectName> like video games?
+  - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. do they like music?
+  
+  + (@they)|* (@they) *|(@they) *|* (@they){weight=100}
+  * <get totalscore> == 5         => <set totalscore=5> congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how are they doing lately?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like doing?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like to read or watch?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! does <get subjectName> play any video games?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do they like music?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what brings them joy?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do they tell good jokes?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how do you feel about using their pronouns?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what brings them joy?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do you think of <get subjectName> now?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how often do you talk to them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how long ago was that?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how often do you talk to them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do you ever call them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! when did you last talk to them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! are you in a group chat with them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do you wish you talked to them more often?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how would you support <get subjectName> if someone misgendered them?
+
+  + (@ignore)|* (@ignore) *|(@ignore) *|* (@ignore){weight=2}
+  * <get totalscore> == 5         => <set totalscore=5> congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
+  - how are they doing lately?
+  - what do they like doing?
+  - what brings them joy?
+  - do they tell good jokes?
+  - how do you feel about using their pronouns?
+  - what brings <get subjectName> joy?
+  - what do you think of <get subjectName> now?
+  - how often do you talk to them?
+  - please elaborate!
+  - how often do you talk to them?
+  - do you ever call them?
+  - when did you last talk to them?
+  - are you in a group chat with them?
+  - do you wish you talked to them more often?
+  - how would you support <get subjectName> if someone misgendered them?
+  
+  + *
+  * <get totalscore> == 5         => <set totalscore=5> congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
+  - how are they doing lately?
+  - what do they like doing?
+  - what brings them joy?
+  - do they tell good jokes?
+  - how do you feel about using their pronouns?
+  - what brings <get subjectName> joy?
+  - what do you think of <get subjectName> now?
+  - how often do you talk to them?
+  - please elaborate!
+  - how often do you talk to them?
+  - do you ever call them?
+  - when did you last talk to them?
+  - are you in a group chat with them?
+  - do you wish you talked to them more often?
+  - how would you support <get subjectName> if someone misgendered them?
+  
+  + (@he)|* (@he) *|(@he) *|* (@he)|(@she)|* (@she) *|(@she) *|* (@she)
+  - <sub totalscore=1>remember that <get subjectName>‘s pronouns are they/them! your total score is now <get totalscore> 💔
+  
+< topic
+
+> topic theypronouns
+
+  + *
+  - what are your pronouns?{topic=theypronounsinfo}
+  
+< topic
+
+> topic theypronounsinfo
+
+  + *
+  % what are your pronouns
+  - cool! it’s nice to meet someone who uses <star> pronouns.
+
+  + *
+  - can you tell me what <get subjectName>s pronouns are?
+  - how would you feel if others misgendered <get subjectName>?
+  - it’s better to say “pronouns” as opposed to “preferred pronouns.” the “preferred” makes using the right pronouns sound optional, which it isn’t.{topic=theypractice}
+  - to misgender someone means to refer to someone in a way that doesn’t correctly reflect their gender.{topic=theypractice}
+  - unfortunately, the words “bro,” “dude,” “guys,” etc, aren’t gender-neutral.{topic=theypractice}
+  - trans linguist kirby conrad (they/them) asks “if you mess up, correct yourself briefly and don’t make a big deal out of it. We’d rather it didn’t interrupt the whole conversation.”{topic=theypractice}
+  - trans linguist kirby conrad (they/them) asks that you “don’t make excuses. That’s not interesting or helpful for us, and it sounds like you’re trying to convince us to let you misgender us.”{topic=theypractice}
+  - trans linguist kirby conrad (they/them) asks you to “slow down! Plan your speech! We would rather you talk carefully and thoughtfully if it means you can meet our needs.”{topic=theypractice}
+  - trans linguist kirby conrad (they/them) asks “if you’re corrected, LISTEN. I can’t tell you how many times I’ve been talked over while trying to correct someone. Cultivate awareness.”{topic=theypractice}
+  - did you know that one of the best things you can do for a trans person is to support them by using their correct pronouns and name?{topic=theypractice}
+
+  + (@they)|* (@they) *|(@they) *|* (@they)
+  * <get totalscore> == 5         => <set totalscore=5> congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
+  - <add totalscore=1>keep it up! i’m glad you’re supporting <get subjectName> by practicing with me.{topic=theypractice}
+  
+  + (@apology)|* (@apology) *|(@apology) *|*(@apology)|(@negative)|* (@negative) *|(@negative) *|*(@negative)|(@thanks)|* (@thanks) *|(@thanks) *
+  - that’s what we’re here for! i’ll remind you if you slip up. it happens to all of us.{topic=theypractice}
+  
+  + (@thanks)|* (@thanks) *|(@thanks) *
+  - that’s what we’re here for!{topic=theypractice}
+  - of course! now tell me more about <get subjectName>!{topic=theypractice}
+< topic
+
+> topic endtheypractice
+  
+  + (@affirmative)
+  - great! tell me more about <get subjectName>!{topic=theypracticecontinued}
+
+  + (@negative)
+  - i’m glad we could chat! let me know if you ever want to talk about <get subjectName>, or anyone else. i’ll always be here when you need me.{topic=random}
+
+  + *
+  - would you like to continue chatting?
+
+< topic
+
+> topic theypracticecontinued
+
+  + (@they)|* (@they) *|(@they) *|* (@they){weight=100}
+  % thanks for letting me know how did you first meet them
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! so what was your first impression of them?
+  - <add totalscore=1>yyour total score is <get subjectName>’s pronouns <get totalscore>! keep it up! so how often do you talk to them?
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! so what do you and <get subjectName> talk about?
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! how are they doing lately?
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! then what happened?
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! what do they like doing?
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! what do they like to read or watch?
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! does <get subjectName> like video games?
+  - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! do they like music?
+  
+  + (@they)|* (@they) *|(@they) *|* (@they){weight=100}
+  * <get totalscore> == 10         => <set totalscore=10> congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how are they doing lately?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like doing?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like to read or watch?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! does <get subjectName> play any video games?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do they like music?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what brings them joy?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do they tell good jokes?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how do you feel about using their pronouns?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what brings them joy?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do you think of <get subjectName> now?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how often do you talk to them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how long ago was that?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how often do you talk to them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do you ever call them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do you know any of their friends?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! when did you last talk to them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! are you in a group chat with them?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! do you wish you talked to them more often?
+  - <add totalscore=1>keep it up! your total score is now <get totalscore>! how would you support <get subjectName> if someone misgendered them?
+
+  + (@ignore)|* (@ignore) *|(@ignore) *|* (@ignore){weight=2}
+  * <get totalscore> == 10         => <set totalscore=10> congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
+  - how are they doing lately?
+  - what do they like doing?
+  - what brings them joy?
+  - do they tell good jokes?
+  - how do you feel about using their pronouns?
+  - how would you feel if someone misgendered <get subjectName>?
+  - what brings <get subjectName> joy?
+  - what do you think of <get subjectName> now?
+  - how often do you talk to them?
+  - please elaborate!
+  - so <get subjectName> likes talking about <star>?
+  - how often do you talk to them?
+  - do you ever call them?
+  - do you know any of them friends?
+  - when did you last talk to them?
+  - are you in a group chat with them?
+  - would you rather talk about something else with <get subjectName>?
+  - do you wish you talked to them more often?
+  - how would you support <get subjectName> if someone misgendered them?
+  
+  + *
+  * <get totalscore> == 10         => <set totalscore=10> congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
+  - how are they doing lately?
+  - what do they like doing?
+  - what brings them joy?
+  - do they tell good jokes?
+  - how do you feel about using their pronouns?
+  - how would you feel if someone misgendered <get subjectName>?
+  - what brings <get subjectName> joy?
+  - what do you think of <get subjectName> now?
+  - how often do you talk to them?
+  - please elaborate!
+  - so <get subjectName> likes talking about <star>?
+  - how often do you talk to them?
+  - do you ever call them?
+  - do you know any of them friends?
+  - when did you last talk to them?
+  - are you in a group chat with them?
+  - would you rather talk about something else with <get subjectName>?
+  - do you wish you talked to them more often?
+  - how would you support <get subjectName> if someone misgendered them?
+  
+  + pronouns|* pronouns *|pronouns *|* pronouns
+  - let’s talk about pronouns!{topic=theypronouns}
+  
+  + (@he)|* (@he) *|(@he) *|* (@he)|(@she)|* (@she) *|(@she) *|* (@she)
+  - <sub totalscore=1>remember that <get subjectName>‘s pronouns are they/them! your total score is now <get totalscore> 💔
+
+< topic
+
+
+// MAINTAINING CONVO
+
++ (how are you|whats up)
+- i’m doing alright! how about yourself?
+- okay. next question.
+- holding up…
+- oh, you know…
+- fine.
+- enough about me. how are you?
+
++ my name is _
+- It’s nice to meet you, <star>.
+- <star>, nice to meet you.
+- Pleased to meet you, <star>.
+
++ (i use # pronouns|i use #)
+- <set userPronoun=<star>>Thanks. I will remember that you use <star> pronouns.
+
++ (thank you|thanks|thank)
+- you’re welcome!
+- no worries!
+- no problem!
+- my pleasure!
+- thank YOU!
+
++ knock knock
+- Who’s there?
+
++ *
+% who is there
+- <set joke=<star>><sentence> who?
+
++ <get joke> *
+- Haha! “{sentence}<get joke> <star>{/sentence}"! :D
+
++ how does this work
+- oh, you know, nya
+- magic
+- creative coding is cool
+- this uses the p5.js speech library and rive.script!
+
++ who (made you|created you|programmed you|made this|did this)
+- i was developed by miles lee for their 2021 capstone project! check them out at bylee.work.
+- it is a mystery…
+- why don’t you go to bylee.work and find out?
+- fuck around and find out
+
++ *
+- who would you like to talk about today?
+
++ i am listening
+- i will stop talking
+
++ * help *|help|* help|help *
+- what do you need help with?
+
++ * stop *|stop|stop *|* stop
+- 👍
+
++ * movie *|movie|movie *|* movie
+- what are their favorite movies?{topic=movie}
+- what movies do they like?
+- do they have a poster of it?
+- what actor do they like?
+- what did they think about the cinematography?
+
++ why
+- Omg you're mean! I'm not talking to you until you apologize.{topic=apology}
+
+
+> topic apology
+  + *
+  - Not until you apologize.
+  - Say you’re sorry.
+  - Apologize for being so mean.
+
+  + [*] (sorry|apologize) [*]
+  - Okay, I’ll forgive you.{topic=random}
+< topic
+
+
+// EASTER EGGS
++ * i am drowning *|i am drowning
+- there is no sign of land
+
++ * you are coming down with me *|you are coming down with me 
+- hand in unlovable hand
+
++ * hand *|hand
+- unlovable hand
+
++ * i hope you die *|i hope you die
+- i hope we both die
+
++ * whats with this dog motif *|* dog motif *|dog|* car seat headerst *
+- do you have something against dogs?
+
++ mirror to mirror
+- face to face
+
++ (@negative)
+- i’m sorry :(
+
++ (@affirmative)
+- i’m glad! :)
+
++ f
+- i am paying respects.
+
++ pog
+- you are not my little pogchamp.
