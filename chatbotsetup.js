@@ -376,7 +376,10 @@ function setup() {
         green = 200;
         red = 0;
         progressBar.style(
-          "width", scoreTotal*20 + "%", "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
+          "width", scoreTotal*20 + "%"
+        );
+        progress.style(
+          "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
         );
         if (scoreTotal > 0) {
           progress.style(
@@ -408,7 +411,10 @@ function setup() {
         red = 200;
         green = 0;
         progressBar.style(
-          "width", scoreTotal*20 + "%", "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.4 + ")"
+          "width", scoreTotal*20 + "%"
+        );
+        progress.style(
+          "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
         );
         if (scoreTotal > 0) {
           progress.style(
