@@ -364,7 +364,7 @@ function setup() {
       if (reply.includes("keep it up") || reply.includes("get your total score to")) {
         scoreRight++;
         scoreTotal++;
-        party.confetti(body);
+        // party.confetti(body);
         console.log("RIGHT! total score is: " + scoreTotal);
         rightScore.html("<b>" + scoreRight + "</b>");
         totalScore.html("<b>" + scoreTotal + "</b>" + ' of 5');
