@@ -222,7 +222,7 @@ function setup() {
             "⭐",
             "🎊",
             "🎉",
-            "💌",
+            "🎀",
             "💫",
             "🌟",
             "🌙",
@@ -328,30 +328,12 @@ function setup() {
   
 
   function chat() {
-    // var myCanvas = document.getElementById("replyspace");
-    // var myConfetti = confetti.create(myCanvas, {
-    //   resize: true,
-    //   useWorker: true
-    // });
-    // myConfetti({
-    //   particleCount: 100,
-    //   spread: 160
-    //   // any other options from the global
-    //   // confetti function
-    // });
     let input = user_input.value();
     console.log("user types: ", input);
     user_input.value(input);
     let reply = bot.reply("local-user", input);
     speech.speak(input);
     bot.reply("local-user", input).then(function(reply) {
-      if (
-        (input = "" || user_input.value() == null || user_input.value() == "")
-      ) {
-        console.log("null input");
-      } else {
-        console.log("input okay");
-      }
       console.log("bot says: ", reply);
       speech.speak(reply);
       let botReplyLabel = createP("<b>practice buddy</b><br>").parent(
@@ -371,18 +353,24 @@ function setup() {
         let emoji = random(rightEmojiArray);
         let emojiSpan = createSpan(emoji).parent(chatspace);
         emojiSpan.addClass("drag");
-        emojiSpan.position(random(0, 500), random(0, 500));
+        emojiSpan.position(random(0, window.innerWidth-100), random(0, window.innerHeight-100));
         emojiSpan.style("font-size", random(50, 100) + "px", "transform", "rotate(" + random(100, 720) + "deg)");
         green = 200;
         red = 0;
         progressBar.style(
-          "width", scoreTotal*20 + "%"
+          "width", scoreTotal*20 + "%", "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
         );
-        progress.style(
-          "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
-        );
+        // progress.style(
+        //   "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
+        // );
+        progressStatus.html("progress: <b>" + scoreTotal*20 + "%");
         if (scoreTotal > 0) {
-          progress.style(
+          progressBar.style(
+            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
+          );
+        }
+        else if (scoreTotal == 5) {
+          progressBar.style(
             "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
           );
         }
@@ -391,12 +379,11 @@ function setup() {
             "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.4 + ")"
           );
         }
-        progressStatus.html("progress: <b>" + scoreTotal*20 + "%");
         if (scoreTotal > 5) {
           progressBar.style(
             "width", scoreTotal*10 + "%"
           );
-          totalScore.html(scoreTotal + ' of 10');
+          totalScore.html('<b>' + scoreTotal + '</b> of 10');
           progressStatus.html("progress: <b>" + scoreTotal*10 + "%");
         }
       }
@@ -413,11 +400,16 @@ function setup() {
         progressBar.style(
           "width", scoreTotal*20 + "%"
         );
-        progress.style(
-          "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
+        progressBar.style(
+          "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.4 + ")"
         );
         if (scoreTotal > 0) {
           progress.style(
+            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
+          );
+        }
+        else if (scoreTotal == 5) {
+          progressBar.style(
             "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
           );
         }
@@ -437,7 +429,7 @@ function setup() {
       }
       if (reply.includes("tell me more about")) {
         progressBar.style(
-          "width", 50 + "%", "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.4 + ")"
+          "width", 50 + "%"
         );
         totalScore.html(scoreTotal + ' of 10');
         progressStatus.html("progress: <b>" + 50 + "%");

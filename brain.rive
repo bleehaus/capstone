@@ -406,45 +406,11 @@
   - how would you support <get subjectName> if someone misgendered them?
   
   + (@he)|* (@he) *|(@he) *|* (@he)|(@she)|* (@she) *|(@she) *|* (@she)
-  - <sub totalscore=1>remember that <get subjectName>‘s pronouns are they/them! your total score is now <get totalscore> 💔
+  - <sub totalscore=1>remember that <get subjectName>’s pronouns are they/them! your total score is now <get totalscore> 💔
+
+  + * (@he) * (@ignore)|* (@he) (@ignore)|(@ignore) * (@he) * (@ignore)|(@ignore) * (@he) *|(@ignore) * (@he)|(@ignore) (@he) (@ignore)|(@ignore) (@he) (@ignore) *|(@ignore) (@he)|(@ignore) (@he) *|(@he) * (@ignore)|(@he) (@ignore)|(@he) * (@ignore) *|(@he) (@ignore) *|* (@ignore) * (@he) * (@ignore)|* (@ignore) * (@he) *|* (@ignore) * (@he)|* (@ignore) (@he) (@ignore)|* (@ignore) (@he) (@ignore) *|* (@ignore) (@he)|* (@ignore) (@he) *|* (@he) * (@ignore)|* (@he) (@ignore)|* (@he) * (@ignore) *|* (@he) (@ignore) *|* (@she) * (@ignore)|* (@she) (@ignore)|(@ignore) * (@she) * (@ignore)|(@ignore) * (@she) *|(@ignore) * (@she)|(@ignore) (@she) (@ignore)|(@ignore) (@she) (@ignore) *|(@ignore) (@she)|(@ignore) (@she) *|(@she) * (@ignore)|(@she) (@ignore)|(@she) * (@ignore) *|(@she) (@ignore) *|* (@ignore) * (@she) * (@ignore)|* (@ignore) * (@she) *|* (@ignore) * (@she)|* (@ignore) (@she) (@ignore)|* (@ignore) (@she) (@ignore) *|* (@ignore) (@she)|* (@ignore) (@she) *|* (@she) * (@ignore)|* (@she) (@ignore)|* (@she) * (@ignore) *|* (@she) (@ignore){weight=2}
+  - <sub totalscore=1>remember that <get subjectName>’s pronouns are they/them! your total score is now <get totalscore> 💔
   
-< topic
-
-> topic theypronouns
-
-  + *
-  - what are your pronouns?{topic=theypronounsinfo}
-  
-< topic
-
-> topic theypronounsinfo
-
-  + *
-  % what are your pronouns
-  - cool! it’s nice to meet someone who uses <star> pronouns.
-
-  + *
-  - can you tell me what <get subjectName>s pronouns are?
-  - how would you feel if others misgendered <get subjectName>?
-  - it’s better to say “pronouns” as opposed to “preferred pronouns.” the “preferred” makes using the right pronouns sound optional, which it isn’t.{topic=theypractice}
-  - to misgender someone means to refer to someone in a way that doesn’t correctly reflect their gender.{topic=theypractice}
-  - unfortunately, the words “bro,” “dude,” “guys,” etc, aren’t gender-neutral.{topic=theypractice}
-  - trans linguist kirby conrad (they/them) asks “if you mess up, correct yourself briefly and don’t make a big deal out of it. We’d rather it didn’t interrupt the whole conversation.”{topic=theypractice}
-  - trans linguist kirby conrad (they/them) asks that you “don’t make excuses. That’s not interesting or helpful for us, and it sounds like you’re trying to convince us to let you misgender us.”{topic=theypractice}
-  - trans linguist kirby conrad (they/them) asks you to “slow down! Plan your speech! We would rather you talk carefully and thoughtfully if it means you can meet our needs.”{topic=theypractice}
-  - trans linguist kirby conrad (they/them) asks “if you’re corrected, LISTEN. I can’t tell you how many times I’ve been talked over while trying to correct someone. Cultivate awareness.”{topic=theypractice}
-  - did you know that one of the best things you can do for a trans person is to support them by using their correct pronouns and name?{topic=theypractice}
-
-  + (@they)|* (@they) *|(@they) *|* (@they)
-  * <get totalscore> == 5         => <set totalscore=5> congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
-  - <add totalscore=1>keep it up! i’m glad you’re supporting <get subjectName> by practicing with me.{topic=theypractice}
-  
-  + (@apology)|* (@apology) *|(@apology) *|*(@apology)|(@negative)|* (@negative) *|(@negative) *|*(@negative)|(@thanks)|* (@thanks) *|(@thanks) *
-  - that’s what we’re here for! i’ll remind you if you slip up. it happens to all of us.{topic=theypractice}
-  
-  + (@thanks)|* (@thanks) *|(@thanks) *
-  - that’s what we’re here for!{topic=theypractice}
-  - of course! now tell me more about <get subjectName>!{topic=theypractice}
 < topic
 
 > topic endtheypractice

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pronoun Practicer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- <script src="chatbotsetup.js"></script> -->
+    <script src="script.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/dux6rqd.css">
+  </head>
+
+  <body id="info">
+    <div id="sidebar">
+      <a href="index.html">
+        <div class="accordionSection">
+          <div class="accordion">back to practice</div>
+        </div>
+        <div class="accordionPanel"></div>
+      </a>
+
+      <a href="resources.html">
+        <div class="accordionSection">
+          <div class="accordion">see more resources</div>
+        </div>
+        <div class="accordionPanel"></div>
+      </a>
+      
+      <div class="accordionSection">
+        <button class="accordion" id="accordion5">🔗 info</button>
+        <div class="accordionPanel">
+          <p>
+            I'm a pronouns practicer tool made by <a href="http://bylee.work/">Miles "Bread" Lee</a> in Spring 2021. I use HTML, CSS, JavaScript, <a href="https://p5js.org/">p5.js</a>, and <a href="https://www.rivescript.com/">RiveScript</a>.
+          </p>
+          <p class="infoLinks">
+            <a href="/info.html">more info</a> <a href="/resources.html">resources</a>
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+    <!-- <canvas id="chatcanvas"></canvas> -->
+    <div class="chatspace">  
+      <div class="intro">
+        <h2>more info</h2>
+        <div class="intro">
+          <!--       <div class="drag">
+        drag me xd
+      </div> -->
+        </div>
+        <!--     <button onClick="scrollSmoothToBottom('replyspace')">Scroll <b>Smooth</b> to Bottom</button> -->
+        <div id="replyspace">
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            What is this?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            I'm an in-progress tool developed by <a href="http://bylee.work/">Miles "Bread" Lee</a> for their Spring 2021 Capstone project. I use HTML, CSS, JavaScript, <a href="https://p5js.org/">p5.js</a>, and <a href="https://www.rivescript.com/">RiveScript</a>.
+          </p>
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            Are you a chatbot?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            Yes. I'm essentially a chatbot. <a href="https://www.rivescript.com/">RiveScript</a> by Noah Petherbridge is a script for writing chatbots. The best way to practice using someone's pronouns is with a real person, but some don't have that option. I'm programmed specifically to help you to practice using someone's pronouns and remind you when you slip up.
+          </p>
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            Okay. If you're a chatbot, how do I talk to you?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            There's a guide on the left sidebar under the "conversation guide" section. Click that to open the panel and learn how to talk to me!
+          </p>
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            When should I practice with you?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            Has your friend recently asked you to start using different pronouns for them? Has a peer recently asked to be called a different name? Are you rusty or confused? We've all been there, and we just need some repeated practice.
+          </p>
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            <b>Why</b> should I practice with you?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            As Trevor J. Sangrey put it, learning someone's pronouns often requires mentally taking them out of one bucket and putting them into another. I'm here to help you make that change.
+          </p>
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            What are other things I can do to practice?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            You can list someone's pronouns in your phone contact. You can practice using their pronouns in your head, like "I texted [name] today. [Pronoun] is so cool and loves cats." You can ask a friend to listen to you as you talk about this person (that's the idea behind this).
+          </p>
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            What if I'm confused about pronouns in general?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            Do I have the <a href="resources.html">resources</a> for you! Check out this page to learn about pronouns, using pronouns, and what to do when you slip up (it happens to all of us).
+          </p>
+          <p class="userreplylabel">question<br /></p>
+          <p class="userreply">
+            How long will you be working on this?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            I'll be working on it at least until June 2021! If you're at all interested in helping or supporting in any way, such as giving me feedback, testing the site, reporting bugs, or getting involved with the code or writing, let me know!
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

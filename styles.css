@@ -102,6 +102,50 @@ button {
   scroll-behavior: smooth;
 }
 
+#info #replyspace {
+  height:80vh;
+}
+
+#info .userreply {
+  font-weight:bold;
+}
+
+#info #sidebar a:hover {
+  color:black;
+  background-color:rgba(255, 255, 255, 0.9);
+  border-radius:0px;
+  text-decoration:none;
+  transition-duration:1s;
+  padding: 0px;
+  font-weight:bold;
+}
+
+#info #sidebar a {
+  margin:0;
+}
+
+#info .accordion {
+  margin:0;
+  padding: 1em 0em 1em 1em;
+  display:inline-block;
+  box-sizing:border-box;
+  /*width:100%;*/
+}
+
+#info .accordion:after {
+  content: none;
+  float:none;
+  margin:0;
+/*  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;*/
+}
+
+#info .active:after {
+  content: none;
+}
+
 .botreplylabel {
   font-size:0.5em;
   font-weight:bold;
@@ -239,13 +283,13 @@ button {
 }
 
 #submit .material-icons {
-  font-size:3em;
+  font-size:5em;
   color:rgba(255, 255, 255, 0.5);
   transition-duration:1s;
 }
 
-.material-icons:hover {
-  rgba(255, 255, 255, 1);
+#submit .material-icons:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 .footer {
@@ -314,9 +358,9 @@ button {
 }
 
 #progress {
-  width: 50%;
+  width: 80%;
   border-radius:10px;
-  margin: 1em 0em;
+  margin: 2em 0em 1em 0em;
   transition-duration:1s;
   background-color:rgba(255, 255, 255, 0.5);
 }
@@ -544,6 +588,7 @@ how to remove the virtical space around the range input in IE*/
 
 .active, .accordion:hover {
   background-color: rgba(255, 255, 255, 0.5);
+  font-weight:bold;
 /*   overflow-y:scroll; */
 }
 
