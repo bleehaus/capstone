@@ -20,38 +20,185 @@
   </head>
 
   <body id="info">
-    <div id="sidebar">
-      <a href="index.html">
-        <div class="accordionSection">
-          <div class="accordion">back to practice</div>
-        </div>
-        <div class="accordionPanel"></div>
-      </a>
 
-      <a href="resources.html">
-        <div class="accordionSection">
-          <div class="accordion">see more resources</div>
-        </div>
-        <div class="accordionPanel"></div>
-      </a>
-      
+    <div id="sidebar">
+      <div class="infoLinks">
+        <a href="index.html"><span class="material-icons">replay</span> practice</a> <a href="info.html" class="activeLink"><span class="material-icons">info</span> info</a>
+      </div>
+
       <div class="accordionSection">
-        <button class="accordion" id="accordion5">🔗 info</button>
-        <div class="accordionPanel">
+        <!-- <button class="accordion" id="accordion1">🗝 conversation guide</button> -->
+        <button class="accordionInfo" id="accordionInfo1">💖 resources</button>
+        <!-- <p>Kirby conrad</p> -->
+        <!-- <div class="accordionInfoPanel resource">
           <p>
-            I'm a pronouns practicer tool made by <a href="http://bylee.work/">Miles "Bread" Lee</a> in Spring 2021. I use HTML, CSS, JavaScript, <a href="https://p5js.org/">p5.js</a>, and <a href="https://www.rivescript.com/">RiveScript</a>.
+            <p class="buddy">
+              use
+            </p>
+            <a href="http://www.pronouns.failedslacker.com/" class="reply">Pronouns Dressing Room</a> <a href="https://www.practicewithpronouns.com/" class="reply">Practice with Pronouns</a> <a href="https://en.pronouns.page/" class="reply">en.pronouns.page</a> <a href="https://pronoun.is/" class="reply">pronoun.is</a>
+            <a href="https://pronouny.xyz/" class="reply">pronouny</a> 
+            <br><br><br>
+
+            <p class="buddy">
+              read
+            </p>
+            <a href="http://singularthey.info/" class="reply">singularthey.info</a>
+            <a href="https://students.wustl.edu/pronouns-information/" class="reply">Pronouns Information (WUSTL)</a> <a href="https://kconrod.medium.com/how-to-do-the-absolute-minimum-with-pronouns-9be0eef5ff62" class="reply">How to do the absolute minimum (Kirby Conrod on Medium)</a>
+            <a href="https://www.them.us/story/american-psychological-association-singular-they-pronoun" class="reply">American Psychological Association Endorses Use of Singular “They” Pronoun (them.us)</a> <a href="https://www.them.us/story/coming-out-they-them-pronouns" class="reply">What People Get Wrong About They/Them Pronouns (them.us)</a> <a href="https://www.washingtonpost.com/world/2019/12/15/guide-how-gender-neutral-language-is-developing-around-world/" class="reply">How gender-neutral language is developing around the world (Washington Post)</a> <a href="https://www.npr.org/2019/12/13/787720675/the-word-of-the-year-is-they" class="reply">The Word Of The Year Is 'They' (NPR)</a> <a href="https://wwnorton.com/books/9781631496042" class="reply">What's Your Pronoun? (Dennis Baron)</a>
+            <br><br><br>
+
+            <p class="buddy">
+              listen
+            </p>
+            <a href="https://www.genderpodcast.com/" class="reply">Gender Reveal (podcast)</a> <a href="https://www.earwolf.com/show/queery/" class="reply">QUEERY (podcast)</a> <a href="https://www.lgbtqpodcast.com/" class="reply">LGBTQ&A (podcast)</a>
+          <br><br>
           </p>
-          <p class="infoLinks">
-            <a href="/info.html">more info</a> <a href="/resources.html">resources</a>
+        </div> -->
+        <div class="accordionInfoPanel resource">
+          <p>
+            <p class="buddy">
+              use
+            </p>
+            <p>
+            <ul>
+              <li class="reply">
+                <a href="http://www.pronouns.failedslacker.com/" class="reply">Pronouns Dressing Room</a>
+              </li>
+              <li class="reply">
+                <a href="https://www.practicewithpronouns.com/" class="reply">Practice with Pronouns</a>
+              </li>
+              <li class="reply">
+                <a href="https://en.pronouns.page/" class="reply">en.pronouns.page</a>
+              </li>
+              <li class="reply">
+                 <a href="https://pronoun.is/" class="reply">pronoun.is</a>
+              </li>
+              <li class="reply">
+                 <a href="https://pronouny.xyz/" class="reply">pronouny</a> 
+              </li>
+            </ul>
+            <p class="buddy">
+              read
+            </p>
+            <ul>
+              <li class="reply">
+                Kirby Conrod on Medium: <a href="https://kconrod.medium.com/how-to-do-the-absolute-minimum-with-pronouns-9be0eef5ff62" class="reply">How to do the absolute minimum (with pronouns)</a>
+              </li>
+              <li class="reply">
+                Michelle Kim for them.us: <a href="https://www.them.us/story/american-psychological-association-singular-they-pronoun" class="reply">American Psychological Association Endorses Use of Singular “They” Pronoun</a> 
+              </li>
+              <li class="reply">
+                APA Style: <a href="https://apastyle.apa.org/style-grammar-guidelines/grammar/singular-they">Singular “They”</a> 
+              </li>
+              <li class="reply">
+                <a href="http://singularthey.info/" class="reply">singularthey.info</a>
+              </li>
+              <li class="reply">
+                 them.us: <a href="https://www.them.us/story/coming-out-they-them-pronouns" class="reply">What People Get Wrong About They/Them Pronouns</a> 
+              </li>
+              <li class="reply">
+                 Dennis Baron's <a href="https://wwnorton.com/books/9781631496042" class="reply">What's Your Pronoun?</a> book
+              </li>
+              <li class="reply">
+                Cyrus Dunham's <a href="https://www.newyorker.com/magazine/2019/08/19/a-year-without-a-name">A Year without a Name</a> book (excerpt)
+              </li>
+              <li class="reply">
+                Washington Post: <a href="https://www.washingtonpost.com/world/2019/12/15/guide-how-gender-neutral-language-is-developing-around-world/" class="reply">How gender-neutral language is developing around the world</a> 
+              </li>
+              <li class="reply">
+                Washington University in St. Louis: <a href="https://students.wustl.edu/pronouns-information/" class="reply">Pronouns Information</a> 
+              </li>
+              <li class="reply">
+                German Lopez for Vox: <a href="https://www.vox.com/2015/4/24/8483561/transgender-gender-identity-expression" class="reply">9 questions about gender identity and being transgender you were too embarrassed to ask</a> 
+              </li>
+              <li class="reply">
+                GLAAD: <a href="https://www.glaad.org/transgender" class="reply">Transgender Media Program</a> 
+              </li>
+              <li class="reply">
+                Human Rights Campaign (HRC): <a href="https://www.hrc.org/resources/transgender" class="reply">Transgender Resources</a> 
+              </li>
+            </ul>
+
+            <p class="buddy">
+              listen and watch
+            </p>
+            <ul>
+              <li class="reply">
+                Podcast: <a href="https://www.genderpodcast.com/" class="reply">Gender Reveal</a> with Tuck Woodstock
+              </li>
+              <li class="reply">
+                TED Talk by Jackson Bird: <a href="https://www.ted.com/talks/jackson_bird_how_to_talk_and_listen_to_transgender_people">How to talk (and listen) to transgender people</a>
+              </li>
+              <li class="rpely">
+                YouTube: <a href="https://www.youtube.com/playlist?list=PL1g3MXAZto6JFDVtT402limyrrLhN98u5">Trans FAQs</a> with Jackson Bird
+              </li>
+              <li class="reply">
+                Netflix: <a href="http://www.disclosurethemovie.com/" class="reply">Disclosure Documentary</a> (dir. Sam Feder 2020) with Laverne Cox, Lilly Wachowski, Mj Rodriguez, and more
+              </li>
+              <li class="reply">
+                Netflix and FX: <a href="https://www.netflix.com/title/80241986">Pose</a>
+              </li>
+              <li class="reply">
+                Podcast: <a href="https://www.earwolf.com/show/queery/" class="reply">QUEERY</a> with Cameron Esposito
+              </li>
+              <li class="reply">
+                Podcast: <a href="https://www.lgbtqpodcast.com/" class="reply">LGBTQ&A</a> with Jeffrey Masters
+              </li>
+            </ul>
           </p>
-          <br>
         </div>
       </div>
+
+      <div class="accordionSection">
+        <button class="accordionInfo" id="accordionInfo3">🧡 attribution</button>
+        <!-- <p>Kirby conrad</p> -->
+        <div class="accordionInfoPanel">
+          <p>
+            <ul>
+              <li class="reply">
+                <a href="https://www.rivescript.com/">RiveScript</a> by Noah Petherbridge
+              </li>
+              <li class="reply">
+                <a href="https://www.rivescript.com/">p5.js</a> led by <a href="https://github.com/mcturner1995">Moira Turner</a> and created by <a href="http://lauren-mccarthy.com/">Lauren Lee McCarthy</a>
+              </li>
+              <li class="reply">
+                <a href="https://idmnyu.github.io/p5.js-speech/">p5.speech library</a> by R. Luke DuBois
+              </li>
+              <li class="reply">
+                Base code and tutorial from <a href="https://thecodingtrain.com/CodingChallenges/080-voice-chatbot.html">The Coding Train</a> by Dan Shiffman
+              </li>
+              <li class="reply">
+                <a href="https://fonts.google.com/specimen/DM+Mono">DM Mono</a> and <a href="https://fonts.google.com/specimen/DM+Sans?query=Colophon+Foundry">DM Sans</a> by <a href="https://www.colophon-foundry.org/">Colophon Foundry,</a> Jonny Pinhorn, and Indian Type Foundry. Used via <a href="https://fonts.google.com/">Google Fonts</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="accordionSection">
+        <button class="accordionInfo" id="accordionInfo2">💜 special thanks</button>
+        <!-- <p>Kirby conrad</p> -->
+        <div class="accordionInfoPanel">
+          <p>
+            Thank you <a href="https://hanahan.works/" class="reply">Jonathan Hanahan</a> for your unfailing support, <b>Trevor Joy Sangrey</b> for your wisdom and the idea behind this project, <a href="https://www.erikaharano.com/" class="reply">Erika Harano</a> for DM Mono (sorry) and your patience, <a href="https://augustang.com/">August Tang</a> for your mentorship, <a href="https://outintech.com/">Out in Tech</a> for hosting a mentorship program, <a href="https://www.cse.wustl.edu/~dshook/teaching.html">Doug Shook</a> for teaching me about clean code in CSE 237 (I wish this code was cleaner. Sorry Doug), <a href="https://www.linkedin.com/in/abramsiemsen/">Abram Siemsen</a> for your endless JavaScript knowledge, <a href="https://benkiel.com/">Ben Kiel</a> for introducing me to creative coding, and all <b>Sam Fox professors</b> for being generous and kind.
+
+            <br><br>Thank you to <b>Ashley, Amy, Will Bates, Molly Needleman, Aaron Zemach, Eric Nylund, Melody, Aaron, John,</b> and <b>Kat</b> for generously taking the time to go through testing with me.
+
+            <br><br>Thank you <a href="https://jduan.work/">Jefferson Duan,</a> <a href="https://lucyjchen.com/">Lucy Chen,</a> <a href="https://jiiyawns.artstation.com/">Grace Park,</a> <a href="https://alevytsky.work/">Andriana Levytsky,</a> <b>Alec O'Brien, Clair Huang, Eugenia Yoh, Natalie Snyder,</b> and the <b>Sam Fox '21 class</b> (honorary or otherwise) for your comradery and grit. Truly.
+
+            <br><br>Thank you to <b>Sonia, Mark, Luca, Evin, Max, Max,</b> and <b>Lane</b> for your enthusiasm and TG meetings.
+            Thank you to <b>Luka, Lisa, Amanda, Trevor, Zoe,</b> and the rest of <a href="https://www.thesqsh.org/">SQSH</a> for your time, support, and active listening workshops.            
+          <br><br>
+          </p>
+        </div>
+      </div>
+
     </div>
+      
     <!-- <canvas id="chatcanvas"></canvas> -->
     <div class="chatspace">  
       <div class="intro">
-        <h2>more info</h2>
+        <h2>info</h2>
         <div class="intro">
           <!--       <div class="drag">
         drag me xd
@@ -61,11 +208,11 @@
         <div id="replyspace">
           <p class="userreplylabel">question<br /></p>
           <p class="userreply">
-            What is this?
+            Who are you? What's going on?
           </p>
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
-            I'm an in-progress tool developed by <a href="http://bylee.work/">Miles "Bread" Lee</a> for their Spring 2021 Capstone project. I use HTML, CSS, JavaScript, <a href="https://p5js.org/">p5.js</a>, and <a href="https://www.rivescript.com/">RiveScript</a>.
+            I'm an in-progress tool developed by <a href="http://bylee.work/">Miles "Bread" Lee</a> for their Spring 2021 Capstone project. I use HTML, CSS, JavaScript, <a href="https://p5js.org/">p5.js,</a> and <a href="https://www.rivescript.com/">RiveScript.</a>
           </p>
           <p class="userreplylabel">question<br /></p>
           <p class="userreply">
@@ -73,11 +220,18 @@
           </p>
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
-            Yes. I'm essentially a chatbot. <a href="https://www.rivescript.com/">RiveScript</a> by Noah Petherbridge is a script for writing chatbots. The best way to practice using someone's pronouns is with a real person, but some don't have that option. I'm programmed specifically to help you to practice using someone's pronouns and remind you when you slip up.
+            Yes. I'm essentially a chatbot. <a href="https://www.rivescript.com/">RiveScript</a> by Noah Petherbridge is a script for writing chatbots. I'm programmed specifically to help you to practice using someone's pronouns and remind you when you slip up. It's probably best to talk with a real person, but some don't have that option.
           </p>
           <p class="userreplylabel">question<br /></p>
           <p class="userreply">
             Okay. If you're a chatbot, how do I talk to you?
+          </p>
+          <p class="botreplylabel">practice buddy<br /></p>
+          <p class="botreply">
+            You can type your reply in the text box at the bottom of the screen. If you want to talk with me, you can enable your microphone by pressing the <span class="material-icons">mic_off</span> icon on the left sidebar under "enable mic to speak." My speech recogniton isn't 100% accurate and you should probably use earphones because I can sadly hear myself!
+          </p>
+          <p class="userreply">
+            What should I say to you?
           </p>
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
@@ -97,7 +251,7 @@
           </p>
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
-            As Trevor J. Sangrey put it, learning someone's pronouns often requires mentally taking them out of one bucket and putting them into another. I'm here to help you make that change.
+            Being misgendered hurts, and misgendering someone you care about hurts. As Trevor J. Sangrey put it, learning someone's pronouns often requires mentally taking them out of one bucket and putting them into another. I'm here to help you make that change.
           </p>
           <p class="userreplylabel">question<br /></p>
           <p class="userreply">
@@ -109,25 +263,41 @@
           </p>
           <p class="userreplylabel">question<br /></p>
           <p class="userreply">
-            What if I'm confused about pronouns in general?
+            What if I'm confused about pronouns or trans people in general?
           </p>
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
-            Do I have the <a href="resources.html">resources</a> for you! Check out this page to learn about pronouns, using pronouns, and what to do when you slip up (it happens to all of us).
+            Do I have the resources for you! Check out the links on the right under "resources."
           </p>
           <p class="userreplylabel">question<br /></p>
           <p class="userreply">
-            How long will you be working on this?
+            Can I help?
           </p>
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
-            I'll be working on it at least until June 2021! If you're at all interested in helping or supporting in any way, such as giving me feedback, testing the site, reporting bugs, or getting involved with the code or writing, let me know!
+            If you're at all interested in helping or supporting in any way, such as giving feedback, testing the site, reporting bugs, or getting involved with the code or writing, you can <a href="mailto:bylee@wustl.edu">email Miles.</a>
           </p>
-
-
         </div>
       </div>
     </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordionInfo");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("infoActive");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+
   </body>
 
 </html>

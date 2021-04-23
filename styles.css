@@ -9,6 +9,7 @@ body {
   margin:0;
   padding:0;
   scroll-behavior: smooth;
+  /*position:relative;*/
 }
 
 h1 {
@@ -32,21 +33,55 @@ a:hover {
   font-weight:bold;
 }
 
+.infoLinks {
+  /*display:block;*/
+  /*width:500px;*/
+  /*position:fixed;*/
+  /*left:1em;*/
+  /*bottom:1em;*/
+  margin:1em;
+  /*background-color:pink;*/
+}
+
+.infoLinks .activeLink a {
+  background-color:rgba(255, 255, 255, 0.9);
+}
+
+.activeLink {
+  /*color:yellow;*/
+  background-color:rgba(255, 255, 255, 0.9);
+}
+
 .infoLinks a {
+  /*font-size:;*/
   color:black;
-  background-color:rgba(255, 255, 255, 0.4);
+  background-color:rgba(255, 255, 255, 0.5);
   border-radius:100px;
   text-decoration:none;
   transition-duration:1s;
+  /*padding: 10px 20px;*/
   padding: 10px 20px;
-  margin: 10px 10px 10px 0px;
+  /*margin: 10px 10px 10px 0px;*/
+  margin:0.5em;
   display:inline-block;
   font-weight:bold;
 }
 
 .infoLinks a:hover {
-  background-color:rgba(255, 255, 255, 0.9);
+  background-color:rgba(255, 255, 255, 1);
   cursor:pointer;
+}
+
+.infoLinks #restart:hover {
+  background-color:rgba(255, 100, 100, 0.9);
+  /*color:rgba(255, 255, 255, 1);*/
+}
+
+.infoLinks .material-icons {
+  font-size:1em;
+  margin:0;
+  padding:0;
+  display:none;
 }
 
 /*#chatcanvas {
@@ -81,6 +116,7 @@ button {
   box-sizing:border-box;
   overflow-y:auto;
   font-size:0.5em;
+  scroll-snap-type: y mandatory;
 }
 
 .chatspace {
@@ -100,6 +136,7 @@ button {
   overflow-y: auto;
   padding-right:0.5em;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 #info #replyspace {
@@ -109,7 +146,7 @@ button {
 #info .userreply {
   font-weight:bold;
 }
-
+/*
 #info #sidebar a:hover {
   color:black;
   background-color:rgba(255, 255, 255, 0.9);
@@ -123,7 +160,7 @@ button {
 #info #sidebar a {
   margin:0;
 }
-
+*/
 #info .accordion {
   margin:0;
   padding: 1em 0em 1em 1em;
@@ -154,11 +191,13 @@ button {
   padding:0;
 /*   background-color:yellow; */
   clear:both;
+  scroll-snap-align: start;
 }
 
 .userreplylabel {
   font-family:'DM Sans', poppins, stratos, sans-serif;
   font-size:0.5em;
+  letter-spacing:1px;
   font-weight:bold;
   text-align:right;
   display:block;
@@ -166,6 +205,7 @@ button {
   padding:0;
 /*   background-color:yellow; */
   clear:both;
+  scroll-snap-align: start;
 }
 
 .botreply {
@@ -181,6 +221,7 @@ button {
 
 .userreply {
   font-family: 'DM Sans', poppins, stratos, sans-serif;
+  letter-spacing:1px;
   background-color:rgba(255, 255, 255, 0.8);
   border-radius: 25px 25px 0px 25px;
   padding: 10px 20px;
@@ -243,6 +284,7 @@ button {
   white-space:wrap;
   font-family: 'DM Sans', poppins, stratos, sans-serif;
 	font-size:0.8em;
+  letter-spacing:1px;
   text-align:left;
 /*   font-weight:bold; */
   width:80%;
@@ -567,6 +609,7 @@ how to remove the virtical space around the range input in IE*/
 /*   background-color:rgba(255, 255, 255, 0.7); */
 /*   border-radius:10px; */
 /*   overflow-y:scroll; */
+  scroll-snap-align: mandatory y;
 }
 
 .accordion {
@@ -581,6 +624,7 @@ how to remove the virtical space around the range input in IE*/
   transition: 0.4s;
   font-family: 'DM Mono', poppins, sans-serif;
   font-size:1em;
+  scroll-snap-align: start;
 /*   overflow-y:scroll; */
 /*   border-style: solid none none none; */
 /*   border-color:rgba(255, 255, 255, 0.5); */
@@ -613,6 +657,77 @@ how to remove the virtical space around the range input in IE*/
 }
 
 .active:after {
+  content: "\2212";
+}
+
+#info .accordionInfo {
+   /*background-color: rgba(255, 255, 255, 0.3); */
+/*   color: #444; */
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'DM Mono', poppins, sans-serif;
+  font-size:1em;
+  scroll-snap-align: start;
+/*   overflow-y:scroll; */
+/*   border-style: solid none none none; */
+/*   border-color:rgba(255, 255, 255, 0.5); */
+}
+
+#info .accordionInfo:hover {
+   background-color: rgba(255, 255, 255, 0.3); 
+}
+
+/*#info .resource a {
+  background-color: rgba(255, 255, 255, 0.6); 
+  border-radius:20px;
+  padding:5px 10px;
+  transition-duration: 1s;
+  margin:10px 10px 10px 0px;
+  display:inline-block;
+}*/
+
+#info .accordionInfoPanel a:hover {
+  background-color: rgba(255, 255, 255, 1); 
+}
+
+#accordionInfo2 a {
+  display:inline;
+  margin:0;
+}
+
+#info .infoActive, .accordionInfo:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight:bold;
+/*   overflow-y:scroll; */
+}
+
+#info .accordionInfoPanel {
+  padding: 0 1em;
+  /*margin:1em;*/
+  background-color: rgba(255, 255, 255, 0.3);
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+/*   font-size:1em; */
+  overflow-y:auto;
+  border-style: solid none none none;
+  border-color:rgba(255, 255, 255, 0.3);
+  height:450px;
+}
+
+#info .accordionInfo:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+#info .infoActive:after {
   content: "\2212";
 }
 

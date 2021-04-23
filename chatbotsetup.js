@@ -83,76 +83,6 @@ function setup() {
   });
   
   document.getElementById ("submit").addEventListener ("click", chat);
-
-  // button.keyPressed(chat);
-
-  //   function keyPressed() {
-  //     console.log("any key was pressed");
-  //     if (keyCode == ENTER) {
-  //       console.log("the enter key was pressed");
-  //     } else if (keyCode == RIGHT_ARROW) {
-  //       console.log("the right arrow key was pressed");
-  //     }
-  //   }
-
-  //   if (keyIsPressed === true) {
-  //     console.log("any key is pressed");
-  //   }
-
-  //   if (keyIsDown(ENTER)) {
-  //     console.log("a key was pressed");
-  //   }
-
-  //   input.addEventListener('keypress', (event) => {
-  //     console.log("You have pressed key: ", event.key);
-  //   });
-
-  // var el = document.getElementById("submit");
-  // el.addEventListener("keyup", function(event) {
-  //     if (event.key == "Enter") {
-  //         chat();
-  //         console.log("the enter key was pressed!")
-  //     }
-  // });
-
-  // document.onkeypress = keyPress;
-  // function keyPress(e){
-  //   var x = e || window.event;
-  //   var key = (x.keyCode || x.which);
-  //   if(key == 13 || key == 3){
-  //    //  myFunc1();
-  //    document.button.submit();
-  //   }
-  // }
-
-  // document.getElementById('submit')
-  // button.addEventListener('keyup', function(event) {
-  //   if (event.code === 'Enter') {
-  //     event.preventDefault();
-  //     document.querySelector('form').submit();
-  //   }
-  // });
-
-  // button.keyPressed(chat);
-
-  // user_input.keyPressed();
-
-  // button.onkeypress(keyPress);
-
-  // function reply() {
-  //   console.log("bot says: ", reply);
-  //   speech.speak(reply);
-  //   let botReplyText = createP('<b>bot:</b> ' + reply).parent(replyspace);
-  // }
-
-  // function keyPressed() {
-  //   console.log('a key was pressed!');
-  //   alert("key press");
-  //   if (keyCode === ENTER) {
-  //     console.log('the enter key was pressed!');
-  //     // user_input.chat();
-  //   }
-  // }
   
   startspeak.mousePressed(startRec);
   function startRec() {
@@ -353,30 +283,30 @@ function setup() {
         let emoji = random(rightEmojiArray);
         let emojiSpan = createSpan(emoji).parent(chatspace);
         emojiSpan.addClass("drag");
-        emojiSpan.position(random(0, window.innerWidth-100), random(0, window.innerHeight-100));
+        emojiSpan.position(random(0, window.innerWidth-150), random(0, window.innerHeight-150));
         emojiSpan.style("font-size", random(50, 100) + "px", "transform", "rotate(" + random(100, 720) + "deg)");
         green = 200;
         red = 0;
         progressBar.style(
-          "width", scoreTotal*20 + "%", "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
+          "width", scoreTotal*20 + "%", "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.9 + ")"
         );
-        // progress.style(
-        //   "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.4 + ")"
-        // );
+        progress.style(
+          "background-color", "rgba(" + 255 + "," + 255 + ", " + 255 + ", " + 0.5 + ")"
+        );
         progressStatus.html("progress: <b>" + scoreTotal*20 + "%");
         if (scoreTotal > 0) {
           progressBar.style(
-            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
+            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.9 + ")"
           );
         }
         else if (scoreTotal == 5) {
           progressBar.style(
-            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
+            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.9 + ")"
           );
         }
         else {
           progress.style(
-            "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.4 + ")"
+            "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.5 + ")"
           );
         }
         if (scoreTotal > 5) {
@@ -401,21 +331,22 @@ function setup() {
           "width", scoreTotal*20 + "%"
         );
         progressBar.style(
-          "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.4 + ")"
+          "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.9 + ")"
         );
-        if (scoreTotal > 0) {
-          progress.style(
-            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
-          );
-        }
-        else if (scoreTotal == 5) {
+        progress.style(
+          "background-color", "rgba(" + 255 + "," + 255 + ", " + 255 + ", " + 0.5 + ")"
+        );
+        if (scoreTotal == 5) {
           progressBar.style(
-            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.4 + ")"
+            "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.9 + ")"
+          );
+          progress.style(
+            "background-color", "rgba(" + 255 + "," + 255 + ", " + 255 + ", " + 0.5 + ")"
           );
         }
-        else {
+        else if (scoreTotal < 0||scoreTotal == 0) {
           progress.style(
-            "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.4 + ")"
+            "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.5 + ")"
           );
         }
         if (scoreTotal > 5) {
@@ -567,6 +498,22 @@ function setup() {
         accordionPanel.style.maxHeight = null;
       } else {
         accordionPanel.style.maxHeight = accordionPanel.scrollHeight + "px";
+      }
+    });
+  }
+
+  var accordionInfo = document.getElementsByClassName("accordionInfo");
+  var i;
+  for (i = 0; i < accordionInfo.length; i++) {
+    console.log("accordion!");
+    accordionInfo[i].addEventListener("click", function() {
+      console.log("accordion opening");
+      this.classList.toggle("infoActive");
+      var accordionInfoPanel = this.nextElementSibling;
+      if (accordionInfoPanel.style.maxHeight) {
+        accordionInfoPanel.style.maxHeight = null;
+      } else {
+        accordionInfoPanel.style.maxHeight = accordionInfoPanel.scrollHeight + "px";
       }
     });
   }

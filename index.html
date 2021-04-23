@@ -38,6 +38,9 @@
 
   <body>
     <div id="sidebar">
+      <div class="infoLinks">
+        <a href="index.html" id="restart"><span class="material-icons">replay</span> restart</a> <a href="info.html"><span class="material-icons">info</span> info</a>
+      </div>
       <!--   <div id="scoreBox"> -->
       <div id="scoreBox">
         <!--     <div id="scoreTitle">
@@ -82,7 +85,7 @@
       </div>
 
       <div class="accordionSection">
-        <button class="accordion" id="accordion1">🎁 conversation guide</button>
+        <button class="accordion" id="accordion1">💛 conversation guide</button>
         <div class="accordionPanel">
           <p>
             <p class="buddy">
@@ -100,13 +103,13 @@
               <li class="reply">reply with a new name to reset name</li>
             </ul>
             <p class="buddy">
-              practice buddy: what pronouns does [name] use?
+              practice buddy: what are [name]'s pronouns?
             </p>
             <ul>
               <li class="reply">reply with [name]'s pronouns</li>
             </ul>
             <p class="buddy">
-              practice buddy: so [name] uses [pronouns]?
+              practice buddy: so [name]'s pronouns are [pronouns]?
             </p>
             <ul>
               <li class="reply">reply "yes" to confirm [name]'s pronouns</li>
@@ -118,15 +121,24 @@
             <ul>
               <li class="reply">talk about [name] while using [name]'s pronouns as often as possible.</li> 
               <li class="reply">you'll gain 1 point for every reply that contains [name]'s pronouns!</li>
-              <li class="reply">if you ever use the wrong pronouns for [name], you'll lose 1 point</li>
+              <li class="reply">aim to get a total score of 5!</li>
+              <li class="reply">if you ever use the wrong pronouns for [name], you'll lose 1 point. note that this is somewhat buggy!</li>
+            </ul>
+            <p class="buddy">
+              practice buddy: congratulations! your total score is 5! 🎊 would you like to continue chatting?
+            </p>
+            <ul>
+              <li class="reply">reply "yes" to keep chatting. aim to get a total score of 10!</li> 
+              <li class="reply">reply "no" to stop chatting</li>
+            </ul>
+              
           </ul>
-          <br>  
           </p>
         </div>
       </div>
 
       <div class="accordionSection">
-        <button class="accordion" id="accordion2">🔑 pronouns guide</button>
+        <button class="accordion" id="accordion2">💙 pronouns guide</button>
         <div class="accordionPanel">
           <p>
             <p class="buddy">
@@ -160,25 +172,27 @@
               <li class="reply"><b>he</b> threw the frisbee to <b>himself</b>.</li>
             </ul>
             <p>
+              guide from <a href="https://pronoun.is/">pronoun.is</a>
+            </p>
+            <p>
               <b>note:</b> i'm working on expanding my library, but for now i am only programmed to use she/her, he/him, and they/them pronouns. stay tuned for more!
             </p>
-            <br>
           </p>
         </div>
       </div>
       
-      <div class="accordionSection">
-        <button class="accordion" id="accordion3">🔗 info</button>
+      <!-- <div class="accordionSection">
+        <button class="accordion" id="accordion3">info</button>
         <div class="accordionPanel">
           <p>
             I'm a pronouns practicer tool made by <a href="http://bylee.work/">Miles "Bread" Lee</a> in Spring 2021. I use HTML, CSS, JavaScript, <a href="https://p5js.org/">p5.js</a>, and <a href="https://www.rivescript.com/">RiveScript</a>.
           </p>
           <p class="infoLinks">
-            <a href="info.html">more info</a> <a href="resources.html">resources</a>
+            <a href="/info.html">info</a> <a href="/faq.html">faq</a> <a href="/resources.html">resources</a>
           </p>
           <br>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- <canvas id="chatcanvas"></canvas> -->
     <div class="chatspace">  
@@ -196,7 +210,7 @@
             hi! i’m a gender pronouns practice buddy! are you struggling with
             using the right pronouns for someone you know? never fear! i can
             help you practice using the right pronouns. if you ever slip up,
-            i’ll gently remind you.
+            i’ll gently correct you.
           </p>
           <p class="botreply">who would you like to talk about today?</p>
           <!--       <p class="userreplylabel">me<br></p><p class="userreply">hello!</p> -->
