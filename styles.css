@@ -39,7 +39,7 @@ a:hover {
   /*position:fixed;*/
   /*left:1em;*/
   /*bottom:1em;*/
-  margin:1em;
+  margin:2em 1em;
   /*background-color:pink;*/
 }
 
@@ -325,7 +325,7 @@ button {
 }
 
 #submit .material-icons {
-  font-size:5em;
+  font-size:4em;
   color:rgba(255, 255, 255, 0.5);
   transition-duration:1s;
 }
