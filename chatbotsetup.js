@@ -168,10 +168,14 @@ function setup() {
 
   function gotSpeech() {
     if (speechRec.resultValue) {
-      let input = speechRec.resultString;
+      let userReplyLabel = createP("<b>me</b><br> ").parent(replyspace);
+        userReplyLabel.addClass("userreplylabel");
+      // let input = speechRec.resultString;
+      let userReplyText = createP(speechRec.resultString).parent(replyspace);
+      userReplyText.addClass("userreply");
+      document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
       console.log("bot hears: ", input);
       bot.reply("local-user", input).then(function(reply) {
-        botReplyText.addClass("botreply");
         console.log("bot says: ", reply);
         speech.speak(reply);
         let botReplyLabel = createP("<br><br><b>practice buddy</b><br>").parent(
@@ -181,11 +185,7 @@ function setup() {
         let botReplyText = createP(reply).parent(replyspace);
         botReplyText.addClass("botreplytext");
         document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
-        let userReplyLabel = createP("<b>me</b><br> ").parent(replyspace);
-        userReplyLabel.addClass("userreplylabel");
-        let userReplyText = createP(speechRec.resultString).parent(replyspace);
-        userReplyText.addClass("userreply");
-        document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
+        
         //REACTIONS
         if (reply.includes("keep it up") || reply.includes("get your total score to")) {
           var myCanvas = document.getElementById("confettiCanvas");
