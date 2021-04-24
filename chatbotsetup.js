@@ -312,7 +312,7 @@ function setup() {
     console.log("user types: ", input);
     user_input.value(input);
     let reply = bot.reply("local-user", input);
-    speech.speak(input);
+    // speech.speak(input);
     bot.reply("local-user", input).then(function(reply) {
       console.log("bot says: ", reply);
       speech.speak(reply);
@@ -533,6 +533,17 @@ function setup() {
   //     // button.click();
   //   }
   // });
+
+  // document.body.addEventListener(function(e) {
+  //   if (e.target.nodeName.toUpperCase() === 'A' && e.target.href) {
+  //     e.target.target = '_blank';
+  //   }
+  // }, true);
+
+  // var links = document.links;
+  // for (var i = 0; i < links.length; i++) {
+  //      links[i].target = "_blank";
+  // }
 
   function startDrag(evt) {
     console.log("something is being dragged");
