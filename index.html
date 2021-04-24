@@ -6,6 +6,7 @@
 
     <title>pronouns practice buddy</title>
     <link rel="shortcut icon" href="CAPSTONE_favicon.png">
+
     <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
     <script src="p5/p5.js"></script>
     <script src="p5/p5.dom.js"></script>
@@ -19,23 +20,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
-<!--     <script src="jquery-3.5.1.min.js"></script> -->
-<!--     <script src="jquery-1.7.2.min.js"></script> -->
-<!--       <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-<!--   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-<!-- 	<script src="jquery.min.js"></script> -->
-<!--   <script src="jquery-ui/jquery-ui.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script> -->
-<!--     https://www.npmjs.com/package/canvas-confetti -->
     <script src="chatbotsetup.js"></script>
     <script src="script.js"></script>
     <script src="brain.rive"></script>
-<!--     <script src="script.js"></script> -->
-    <!--   <script src="drag.js"></script> -->
     <link href="styles.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://use.typekit.net/dux6rqd.css">
     <script src="node_modules/confetti-js/dist/index.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
   </head>
@@ -201,30 +192,13 @@
         </div>
       </div>
       
-      <!-- <div class="accordionSection">
-        <button class="accordion" id="accordion3">info</button>
-        <div class="accordionPanel">
-          <p>
-            I'm a pronouns practicer tool made by <a target="_blank" href="http://bylee.work/">Miles "Bread" Lee</a> in Spring 2021. I use HTML, CSS, JavaScript, <a target="_blank" href="https://p5js.org/">p5.js</a>, and <a target="_blank" href="https://www.rivescript.com/">RiveScript</a>.
-          </p>
-          <p class="infoLinks">
-            <a target="_blank" href="/info.html">info</a> <a target="_blank" href="/faq.html">faq</a> <a target="_blank" href="/resources.html">resources</a>
-          </p>
-          <br>
-        </div>
-      </div> -->
     </div>
-    <!-- <canvas id="chatcanvas"></canvas> -->
     <div class="chatspace">  
       <canvas id="confettiCanvas"></canvas>
       <div class="intro">
         <h2>practice pronouns with me!</h2>
         <div class="intro">
-          <!--       <div class="drag">
-        drag me xd
-      </div> -->
         </div>
-        <!--     <button onClick="scrollSmoothToBottom('replyspace')">Scroll <b>Smooth</b> to Bottom</button> -->
         <div id="replyspace">
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
@@ -234,21 +208,13 @@
             i’ll gently correct you.
           </p>
           <p class="botreply">who would you like to talk about today?</p>
-          <!--       <p class="userreplylabel">me<br></p><p class="userreply">hello!</p> -->
         </div>
         <div class="chatbox">
-          <!--           <input
-            id="user_input"
-            size="2em"
-            placeholder="type a message to the bot"
-          /> -->
-          <!--           <textarea id="user_input" placeholder="type your reply" rows="1"></textarea> -->
           <textarea
             id="user_input"
             placeholder="type your reply"
             rows="1"
           ></textarea>
-          <!--                onkeydown = "enterKey();" -->
           <button id="submit">
             <i class="material-icons">&#xe163;</i>
           </button>
@@ -256,18 +222,11 @@
       </div>
     </div>
     <script>
-      // Get the modal
       var modal = document.getElementById("myModal");
-
-      // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
         modal.style.display = "none";
       }
-
-      // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
         if (event.target == modal) {
           modal.style.display = "none";

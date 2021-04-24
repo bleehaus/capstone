@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <!-- <script src="chatbotsetup.js"></script> -->
     <script src="script.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/dux6rqd.css">
@@ -44,33 +43,7 @@
       </div>
 
       <div class="accordionSection">
-        <!-- <button class="accordion" id="accordion1">🗝 conversation guide</button> -->
         <button class="accordionInfo" id="accordionInfo1">💖 resources</button>
-        <!-- <p>Kirby conrad</p> -->
-        <!-- <div class="accordionInfoPanel resource">
-          <p>
-            <p class="buddy">
-              use
-            </p>
-            <a target="_blank" href="http://www.pronouns.failedslacker.com/" class="reply">Pronouns Dressing Room</a> <a target="_blank" href="https://www.practicewithpronouns.com/" class="reply">Practice with Pronouns</a> <a target="_blank" href="https://en.pronouns.page/" class="reply">en.pronouns.page</a> <a target="_blank" href="https://pronoun.is/" class="reply">pronoun.is</a>
-            <a target="_blank" href="https://pronouny.xyz/" class="reply">pronouny</a> 
-            <br><br><br>
-
-            <p class="buddy">
-              read
-            </p>
-            <a target="_blank" href="http://singularthey.info/" class="reply">singularthey.info</a>
-            <a target="_blank" href="https://students.wustl.edu/pronouns-information/" class="reply">Pronouns Information (WUSTL)</a> <a target="_blank" href="https://kconrod.medium.com/how-to-do-the-absolute-minimum-with-pronouns-9be0eef5ff62" class="reply">How to do the absolute minimum (Kirby Conrod on Medium)</a>
-            <a target="_blank" href="https://www.them.us/story/american-psychological-association-singular-they-pronoun" class="reply">American Psychological Association Endorses Use of Singular “They” Pronoun (them.us)</a> <a target="_blank" href="https://www.them.us/story/coming-out-they-them-pronouns" class="reply">What People Get Wrong About They/Them Pronouns (them.us)</a> <a target="_blank" href="https://www.washingtonpost.com/world/2019/12/15/guide-how-gender-neutral-language-is-developing-around-world/" class="reply">How gender-neutral language is developing around the world (Washington Post)</a> <a target="_blank" href="https://www.npr.org/2019/12/13/787720675/the-word-of-the-year-is-they" class="reply">The Word Of The Year Is 'They' (NPR)</a> <a target="_blank" href="https://wwnorton.com/books/9781631496042" class="reply">What's Your Pronoun? (Dennis Baron)</a>
-            <br><br><br>
-
-            <p class="buddy">
-              listen
-            </p>
-            <a target="_blank" href="https://www.genderpodcast.com/" class="reply">Gender Reveal (podcast)</a> <a target="_blank" href="https://www.earwolf.com/show/queery/" class="reply">QUEERY (podcast)</a> <a target="_blank" href="https://www.lgbtqpodcast.com/" class="reply">LGBTQ&A (podcast)</a>
-          <br><br>
-          </p>
-        </div> -->
         <div class="accordionInfoPanel resource">
           <p>
             <p class="buddy">
@@ -214,6 +187,12 @@
               <li class="reply">
                 <a target="_blank" href="https://fonts.google.com/specimen/DM+Mono">DM Mono</a> and <a target="_blank" href="https://fonts.google.com/specimen/DM+Sans?query=Colophon+Foundry">DM Sans</a> by <a target="_blank" href="https://www.colophon-foundry.org/">Colophon Foundry,</a> Jonny Pinhorn, and Indian Type Foundry. Used via <a target="_blank" href="https://fonts.google.com/">Google Fonts</a>
               </li>
+              <li class="reply">
+                <a target="_blank" href="https://material.io/resources/icons/">Material Icons</a> by Google
+              </li>
+              <li class="reply">
+                <a target="_blank" href="https://www.npmjs.com/package/canvas-confetti">confetti</a> by <a href="https://github.com/catdad">Kiril Vatev</a>
+              </li>
             </ul>
           </p>
         </div>
@@ -239,16 +218,11 @@
 
     </div>
       
-    <!-- <canvas id="chatcanvas"></canvas> -->
     <div class="chatspace">  
       <div class="intro">
         <h2>info</h2>
         <div class="intro">
-          <!--       <div class="drag">
-        drag me xd
-      </div> -->
         </div>
-        <!--     <button onClick="scrollSmoothToBottom('replyspace')">Scroll <b>Smooth</b> to Bottom</button> -->
         <div id="replyspace">
           <p class="userreplylabel">me<br /></p>
           <p class="userreply">
@@ -349,18 +323,11 @@
         });
       }
 
-      // Get the modal
       var modal = document.getElementById("myModal");
-
-      // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
         modal.style.display = "none";
       }
-
-      // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
         if (event.target == modal) {
           modal.style.display = "none";

@@ -170,12 +170,12 @@ function setup() {
     if (speechRec.resultValue) {
       let userReplyLabel = createP("<b>me</b><br> ").parent(replyspace);
         userReplyLabel.addClass("userreplylabel");
-      // let input = speechRec.resultString;
+      let input = speechRec.resultString;
       let userReplyText = createP(speechRec.resultString).parent(replyspace);
       userReplyText.addClass("userreply");
       document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
-      console.log("bot hears: ", userReplyText);
-      bot.reply("local-user", userReplyText).then(function(reply) {
+      console.log("bot hears: ", input);
+      bot.reply("local-user", input).then(function(reply) {
         console.log("bot says: ", reply);
         speech.speak(reply);
         let botReplyLabel = createP("<br><br><b>practice buddy</b><br>").parent(
