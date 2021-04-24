@@ -183,7 +183,7 @@ function setup() {
         );
         botReplyLabel.addClass("botreplylabel");
         let botReplyText = createP(reply).parent(replyspace);
-        botReplyText.addClass("botreplytext");
+        botReplyText.addClass("botreply");
         document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
         
         //REACTIONS
