@@ -43,15 +43,6 @@ a:hover {
   /*background-color:pink;*/
 }
 
-.infoLinks .activeLink a {
-  background-color:rgba(255, 255, 255, 0.9);
-}
-
-.activeLink {
-  /*color:yellow;*/
-  background-color:rgba(255, 255, 255, 0.9);
-}
-
 .infoLinks a {
   /*font-size:;*/
   color:black;
@@ -82,6 +73,15 @@ a:hover {
   margin:0;
   padding:0;
   display:none;
+}
+
+#activeLink {
+  background-color:rgba(255, 255, 255, 0.9);
+}
+
+.activeLink {
+  /*color:yellow;*/
+  background-color:rgba(255, 255, 255, 0.9);
 }
 
 /*#chatcanvas {
@@ -236,11 +236,11 @@ button {
 }
 
 .botreply:hover {
-  background-color:rgba(255, 255, 255, 0.6);
+  background-color:rgba(255, 255, 255, 0.7);
 }
 
 .userreply:hover {
-  background-color:rgba(255, 255, 255, 0.9);
+  background-color:rgba(255, 255, 255, 1);
 }
 
 ::-webkit-scrollbar {
@@ -645,7 +645,7 @@ how to remove the virtical space around the range input in IE*/
   overflow-y:auto;
   border-style: solid none none none;
   border-color:rgba(255, 255, 255, 0.3);
-  height:300px;
+  height:400px;
 }
 
 .accordion:after {
@@ -769,6 +769,10 @@ how to remove the virtical space around the range input in IE*/
 .emojiSpan:hover {
   font-size:140px;
   transform: rotate3d(1, 1, 1, 45deg);
+}
+
+#confettiCanvas {
+  margin:30% auto;
 }
 
 .b {top: 120px}

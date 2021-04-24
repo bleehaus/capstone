@@ -170,89 +170,139 @@ function setup() {
     if (speechRec.resultValue) {
       let input = speechRec.resultString;
       console.log("bot hears: ", input);
-      // bot.reply('local-user', input).then(reply());
       bot.reply("local-user", input).then(function(reply) {
+        botReplyText.addClass("botreply");
         console.log("bot says: ", reply);
         speech.speak(reply);
         let botReplyLabel = createP("<br><br><b>practice buddy</b><br>").parent(
           replyspace
         );
-        // botReplyLabel.style('font-size', '0.75em', 'margin', '0', 'padding', '0');
         botReplyLabel.addClass("botreplylabel");
         let botReplyText = createP(reply).parent(replyspace);
         botReplyText.addClass("botreplytext");
-        // let botReplyText = new botreply (createSpan(reply).parent(replyspace));
-        // botReplyText.style('font-size', '1em', 'margin', '0', 'padding', '0', 'float', 'right', 'border-radius', '200px 200px 0px 200px', 'background-color', 'rgba(255, 255, 255, 0.8)');
-        if (reply.includes("keep it up")) {
-          // party.confetti(body);
+        document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
+        let userReplyLabel = createP("<b>me</b><br> ").parent(replyspace);
+        userReplyLabel.addClass("userreplylabel");
+        let userReplyText = createP(speechRec.resultString).parent(replyspace);
+        userReplyText.addClass("userreply");
+        document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
+        //REACTIONS
+        if (reply.includes("keep it up") || reply.includes("get your total score to")) {
+          var myCanvas = document.getElementById("confettiCanvas");
+          var myConfetti = confetti.create(myCanvas, {
+            resize: true,
+            useWorker: true
+          });
+          myConfetti({
+            particleCount: 100,
+            spread: 100,
+            angle: 90,
+            startVelocity:50
+          });
           scoreRight++;
           scoreTotal++;
           console.log("RIGHT! total score is: " + scoreTotal);
-          rightScore.html(scoreRight);
-          totalScore.html(scoreTotal);
+          rightScore.html("<b>" + scoreRight + "</b>");
+          totalScore.html("<b>" + scoreTotal + "</b>" + ' of 5');
           let emoji = random(rightEmojiArray);
-          let span = createSpan(emoji).parent(rightScore);
-          span.style(
-            "font-size",
-            random100 + "px",
-            "z-index",
-            "2",
-            "cursor",
-            "move"
+          let emojiSpan = createSpan(emoji).parent(chatspace);
+          emojiSpan.addClass("drag");
+          emojiSpan.position(random(0, window.innerWidth-150), random(0, window.innerHeight-150));
+          emojiSpan.style("font-size", random(50, 100) + "px", "transform", "rotate(" + random(100, 720) + "deg)");
+          green = 200;
+          red = 0;
+          progressBar.style(
+            "width", scoreTotal*20 + "%", "background-color", "rgba(" + red + "," + green + ", " + blue + ", " + 0.9 + ")"
           );
+          progress.style(
+            "background-color", "rgba(" + 255 + "," + 255 + ", " + 255 + ", " + 0.5 + ")"
+          );
+          progressStatus.html("progress: <b>" + scoreTotal*20 + "%");
+          if (scoreTotal > 0) {
+            progressBar.style(
+              "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.9 + ")"
+            );
+          }
+          else if (scoreTotal == 5) {
+            progressBar.style(
+              "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.9 + ")"
+            );
+          }
+          else {
+            progress.style(
+              "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.5 + ")"
+            );
+          }
+          if (scoreTotal > 5) {
+            progressBar.style(
+              "width", scoreTotal*10 + "%"
+            );
+            totalScore.html('<b>' + scoreTotal + '</b> of 10');
+            progressStatus.html("progress: <b>" + scoreTotal*10 + "%");
+          }
         }
-        if (reply.includes("get your total score to")) {
-          scoreRight++;
-          scoreTotal++;
-          console.log("RIGHT! total score is: " + scoreTotal);
-          rightScore.html(scoreRight);
-          totalScore.html(scoreTotal);
-          let emoji = random(rightEmojiArray);
+        if (reply.includes("congratulations")) {
+          var myCanvas = document.getElementById("confettiCanvas");
+            var myConfetti = confetti.create(myCanvas, {
+              resize: true,
+              useWorker: true
+            });
+            myConfetti({
+              particleCount: 2000,
+              spread: 1000,
+              angle: 90,
+              startVelocity:60
+            });
         }
         if (reply.includes("remember")) {
           scoreWrong++;
           scoreTotal--;
           console.log("WRONG! total score is: " + scoreTotal);
-          wrongScore.html(scoreWrong);
-          totalScore.html(scoreTotal);
-          let random100 = random(50, 100);
-          // let emoji = "💔";
-          // let emojiSpan = createSpan(emoji).parent(wrongScore);
-          // emojiSpan.addClass("emojiSpan");
-          // span.style('font-size', random100 + 'px', 'z-index', '2');
-          // span.position(random(0, 500), random(0, 500));
-        }
-        if (scoreTotal => 0) {
-          let random255 = random(100, 255);
-          // scorebox.style('background-color', 'rgba(' + random255 + ', 255, 255)');
-        }
-        if (scoreTotal < 0) {
-          let random255 = random(100, 255);
-          scoreTotal.style(
-            "background-color",
-            "rgba(255, " + random255 + ", " + random255 + ")"
+          wrongScore.html("<b>" + scoreWrong + "</b>");
+          totalScore.html("<b>" + scoreTotal + "</b>" + ' of 5');
+          let random100 = random(10, 80);
+          let emoji = "💔";
+          red = 200;
+          green = 0;
+          progressBar.style(
+            "width", scoreTotal*20 + "%"
           );
+          progressBar.style(
+            "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.9 + ")"
+          );
+          progress.style(
+            "background-color", "rgba(" + 255 + "," + 255 + ", " + 255 + ", " + 0.5 + ")"
+          );
+          if (scoreTotal == 5) {
+            progressBar.style(
+              "background-color", "rgba(" + 0 + "," + 200 + ", " + blue + ", " + 0.9 + ")"
+            );
+            progress.style(
+              "background-color", "rgba(" + 255 + "," + 255 + ", " + 255 + ", " + 0.5 + ")"
+            );
+          }
+          else if (scoreTotal < 0||scoreTotal == 0) {
+            progress.style(
+              "background-color", "rgba(" + 200 + "," + 0 + ", " + blue + ", " + 0.5 + ")"
+            );
+          }
+          if (scoreTotal > 5) {
+            progressBar.style(
+              "width", scoreTotal*10 + "%"
+            );
+            totalScore.html("<b>" + scoreTotal + "</b> of 10");
+            progressStatus.html("progress: <b>" + scoreTotal*10 + "%");
+          }
+          progressStatus.html("progress: <b>" + scoreTotal*20 + "%");
         }
-        if (scoreTotal == 5) {
-          console.log("finished! total score is: " + scoreTotal);
+        if (reply.includes("tell me more about")) {
+          progressBar.style(
+            "width", 50 + "%"
+          );
+          totalScore.html(scoreTotal + ' of 10');
+          progressStatus.html("progress: <b>" + 50 + "%");
         }
       });
-      let userReplyLabel = createP("<b>me</b><br> ").parent(replyspace);
-      // userReplyLabel.style('font-size', '0.75em', 'margin', '0', 'padding', '0');
-      userReplyLabel.addClass("userreplylabel");
-      let userReplyText = createP(speechRec.resultString).parent(replyspace);
-      userReplyText.style(
-        "font-size",
-        "1em",
-        "margin",
-        "0",
-        "padding",
-        "0",
-        "font-weight",
-        "bold"
-      );
-      //       if (speechRec.resultString.contains('she')) {
-      //       }
     }
   }
   
@@ -274,9 +324,19 @@ function setup() {
       botReplyText.addClass("botreply");
       document.getElementById("replyspace").scrollTop = document.getElementById("replyspace").scrollHeight - document.getElementById("replyspace").clientHeight;
       if (reply.includes("keep it up") || reply.includes("get your total score to")) {
+        var myCanvas = document.getElementById("confettiCanvas");
+        var myConfetti = confetti.create(myCanvas, {
+          resize: true,
+          useWorker: true
+        });
+        myConfetti({
+          particleCount: 100,
+          spread: 100,
+          angle: 90,
+          startVelocity:50
+        });
         scoreRight++;
         scoreTotal++;
-        // party.confetti(body);
         console.log("RIGHT! total score is: " + scoreTotal);
         rightScore.html("<b>" + scoreRight + "</b>");
         totalScore.html("<b>" + scoreTotal + "</b>" + ' of 5');
@@ -317,11 +377,24 @@ function setup() {
           progressStatus.html("progress: <b>" + scoreTotal*10 + "%");
         }
       }
+      if (reply.includes("congratulations")) {
+        var myCanvas = document.getElementById("confettiCanvas");
+          var myConfetti = confetti.create(myCanvas, {
+            resize: true,
+            useWorker: true
+          });
+          myConfetti({
+            particleCount: 2000,
+            spread: 1000,
+            angle: 90,
+            startVelocity:60
+          });
+      }
       if (reply.includes("remember")) {
         scoreWrong++;
         scoreTotal--;
         console.log("WRONG! total score is: " + scoreTotal);
-        wrongScore.html(scoreWrong);
+        wrongScore.html("<b>" + scoreWrong + "</b>");
         totalScore.html("<b>" + scoreTotal + "</b>" + ' of 5');
         let random100 = random(10, 80);
         let emoji = "💔";
@@ -353,7 +426,7 @@ function setup() {
           progressBar.style(
             "width", scoreTotal*10 + "%"
           );
-          totalScore.html(scoreTotal + ' of 10');
+          totalScore.html("<b>" + scoreTotal + "</b> of 10");
           progressStatus.html("progress: <b>" + scoreTotal*10 + "%");
         }
         progressStatus.html("progress: <b>" + scoreTotal*20 + "%");

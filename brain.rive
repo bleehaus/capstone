@@ -336,7 +336,7 @@
 
 > topic theypractice
   
-  + (@they)|* (@they) *|(@they) *|* (@they){weight=100}
+  + (@they)|* (@they) *|(@they) *|* (@they){weight=10}
   % thanks for letting me know how did you first meet * try to use their pronouns in your reply
   - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! see if you can get your total score to 5. so what was your first impression of them?
   - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. so how often do you talk to them?
@@ -348,8 +348,8 @@
   - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. does <get subjectName> like video games?
   - <add totalscore=1>you’ve used <get subjectName>’s pronouns in 1 reply, so your total score is <get totalscore>! ⭐️ see if you can get your total score to 5. do they like music?
   
-  + (@they)|* (@they) *|(@they) *|* (@they){weight=100}
-  * <get totalscore> == 4         => congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
+  + (@they)|* (@they) *|(@they) *|* (@they){weight=10}
+  * <get totalscore> == 5         => congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! how are they doing lately?
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like doing?
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like to read or watch?
@@ -370,7 +370,7 @@
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! how would you support <get subjectName> if someone misgendered them?
 
   + (@ignore)|* (@ignore) *|(@ignore) *|* (@ignore){weight=2}
-  * <get totalscore> == 4         => congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
+  * <get totalscore> == 5         => congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
   - how are they doing lately? try to use their pronouns in your reply!
   - what do they like doing? try to use their pronouns in your reply!
   - what brings them joy? try to use their pronouns in your reply!
@@ -388,7 +388,7 @@
   - how would you support <get subjectName> if someone misgendered them? try to use their pronouns in your reply!
   
   + *
-  * <get totalscore> == 4         => congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
+  * <get totalscore> == 5         => congratulations! your total score is 5! 🎊 would you like to continue chatting?{topic=endtheypractice}
   - how are they doing lately? try to use their pronouns in your reply!
   - what do they like doing? try to use their pronouns in your reply!
   - what brings them joy? try to use their pronouns in your reply!
@@ -441,7 +441,7 @@
   - <add totalscore=1>your total score is <get subjectName>’s pronouns <get totalscore>! keep it up! do they like music?
   
   + (@they)|* (@they) *|(@they) *|* (@they){weight=100}
-  * <get totalscore> == 9         => congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
+  * <get totalscore> == 10         => congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! how are they doing lately?
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like doing?
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! what do they like to read or watch?
@@ -463,7 +463,7 @@
   - <add totalscore=1>keep it up! your total score is now <get totalscore>! how would you support <get subjectName> if someone misgendered them?
 
   + (@ignore)|* (@ignore) *|(@ignore) *|* (@ignore){weight=2}
-  * <get totalscore> == 9         => congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
+  * <get totalscore> == 10         => congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
   - how are they doing lately?
   - what do they like doing?
   - what brings them joy?
@@ -485,7 +485,7 @@
   - how would you support <get subjectName> if someone misgendered them?
   
   + *
-  * <get totalscore> == 9         => <set totalscore=10> congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
+  * <get totalscore> == 10         => <set totalscore=10> congratulations! your total score is 10! would you like to continue chatting?{topic=endtheypractice}
   - how are they doing lately?
   - what do they like doing?
   - what brings them joy?

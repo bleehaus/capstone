@@ -34,12 +34,15 @@
     <link href="styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/dux6rqd.css">
     <script src="node_modules/confetti-js/dist/index.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
   </head>
 
   <body>
     <div id="sidebar">
       <div class="infoLinks">
-        <a href="index.html" id="restart">replay</span> restart</a> <a href="info.html">info</a>
+        <a href="index.html" id="restart">restart</a> <a href="info.html">info</a>
       </div>
       <!--   <div id="scoreBox"> -->
       <div id="scoreBox">
@@ -196,6 +199,7 @@
     </div>
     <!-- <canvas id="chatcanvas"></canvas> -->
     <div class="chatspace">  
+      <canvas id="confettiCanvas"></canvas>
       <div class="intro">
         <h2>practice pronouns with me!</h2>
         <div class="intro">
