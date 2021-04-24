@@ -857,17 +857,10 @@ how to remove the virtical space around the range input in IE*/
   height:50vh;
   width:10vh;*/
   position:absolute;
-  height: 70%;
-  top: 20%;
-  width: 60%;
+  height: 60%;
+  top: 10%;
+  width: 50%;
 }
-
-.b {top: 120px}
-.c {left: 120px}
-.d {top: 120px;left:120px}
-
-/* .selected {background-color: #4af;} */
-
 
 main {
   height:0;
