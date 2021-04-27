@@ -29,6 +29,16 @@
     <script src="node_modules/confetti-js/dist/index.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V50ZH5C5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-55V50ZH5C5');
+    </script>
+
   </head>
 
   <body>
@@ -100,13 +110,13 @@
         <div class="accordionPanel">
           <p>
             <p class="buddy">
-              practice buddy: who would you like to talk about today?
+              who would you like to talk about today?
             </p>
             <ul>
               <li class="reply">reply with someone's name</li>
             </ul>
             <p class="buddy">
-              practice buddy: so you want to talk about [name] today?
+              so you want to talk about [name] today?
             </p>
             <ul>
               <li class="reply">reply "yes" to confirm name</li>
@@ -114,20 +124,20 @@
               <li class="reply">reply with a new name to reset name</li>
             </ul>
             <p class="buddy">
-              practice buddy: what are [name]'s pronouns?
+              what are [name]'s pronouns?
             </p>
             <ul>
               <li class="reply">reply with [name]'s pronouns</li>
             </ul>
             <p class="buddy">
-              practice buddy: so [name]'s pronouns are [pronouns]?
+              so [name]'s pronouns are [pronouns]?
             </p>
             <ul>
               <li class="reply">reply "yes" to confirm [name]'s pronouns</li>
               <li class="reply">reply "no" to reset [name]'s pronouns</li>
             </ul>
             <p class="buddy">
-              practice buddy: thanks for letting me know! how did you first meet [name]? try to use [pronouns] in your reply.
+              thanks for letting me know! how did you first meet [name]? try to use [pronouns] in your reply.
             </p>
             <ul>
               <li class="reply">talk about [name] while using [name]'s pronouns as often as possible.</li> 
@@ -136,13 +146,12 @@
               <li class="reply">if you ever use the wrong pronouns for [name], you'll lose 1 point. note that this is somewhat buggy!</li>
             </ul>
             <p class="buddy">
-              practice buddy: congratulations! your total score is 5! 🎊 would you like to continue chatting?
+              congratulations! your total score is 5! 🎊 would you like to continue chatting?
             </p>
             <ul>
-              <li class="reply">reply "yes" to keep chatting. aim to get a total score of 10!</li> 
+              <li class="reply">reply "yes" to keep chatting. aim for a total score of 10!</li> 
               <li class="reply">reply "no" to stop chatting</li>
             </ul>
-              
           </ul>
           </p>
         </div>
@@ -202,10 +211,7 @@
         <div id="replyspace">
           <p class="botreplylabel">practice buddy<br /></p>
           <p class="botreply">
-            hi! i’m a gender pronouns practice buddy! are you struggling with
-            using the right pronouns for someone you know? never fear! i can
-            help you practice using the right pronouns. if you ever slip up,
-            i’ll gently correct you.
+            hi! i’m a gender pronouns practice buddy! are you struggling with using the right pronouns for someone you know? never fear! i can help you practice using the right pronouns. if you ever slip up, i’ll gently correct you.
           </p>
           <p class="botreply">who would you like to talk about today?</p>
         </div>
