@@ -228,7 +228,7 @@ button {
   margin:0.5em 0em 0.5em 0em;
   font-size:0.8em;
   display:inline-block;
-  text-align:right;
+  /*text-align:right;*/
 /*   justify-content:flex-end; */
   float:right;
   clear:both;
